@@ -1,0 +1,979 @@
+/* Reset default margins and padding for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a default font and background for web pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+}
+
+/* Header styling for logo, used on all web pages */
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Logo image sizing for web pages */
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Breadcrumb navigation styling for About, Contact, and Case Studies pages */
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #f5f5f5; /* Light gray background for subtle contrast */
+    font-size: 0.9em;
+}
+
+/* Breadcrumb link styling */
+.breadcrumb a {
+    color: #333333; /* Dark gray for links */
+    text-decoration: none;
+}
+
+/* Breadcrumb link hover effect */
+.breadcrumb a:hover {
+    color: #000000; /* Black on hover */
+}
+
+/* Breadcrumb separator spacing */
+.breadcrumb span {
+    color: #555555; /* Medium gray for current page */
+    margin-left: 5px;
+}
+
+/* Hero section styling for homepage */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+}
+
+/* Hero headline styling */
+.hero-headline {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Hero tagline styling */
+.hero-tagline {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333333; /* Dark gray for subtle contrast */
+}
+
+/* Hero description styling */
+.hero-description {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #555555; /* Medium gray for readability */
+}
+
+/* CTA buttons container for homepage */
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* General button styling for CTAs across web pages */
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Primary button styling for web pages */
+.btn-primary {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+/* Secondary button styling for web pages */
+.btn-secondary {
+    background-color: #cccccc; /* Light gray background */
+    color: #000000; /* Black text */
+}
+
+/* Services section styling for homepage */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Services heading styling */
+.services-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Services container using flexbox for layout */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual service item styling */
+.service-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background */
+    border-radius: 5px;
+}
+
+/* Service title styling */
+.service-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Service description styling */
+.service-description {
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Company Story section styling for About page */
+.company-story {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for clean look */
+}
+
+/* Story heading styling */
+.story-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Story content paragraphs */
+.story-content {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    color: #555555; /* Medium gray for readability */
+}
+
+/* Mission section styling for About page */
+.mission {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray for contrast */
+}
+
+/* Mission heading styling */
+.mission-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Mission content styling */
+.mission-content {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #333333; /* Dark gray for emphasis */
+}
+
+/* Team section styling for About page */
+.team {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Team heading styling */
+.team-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Team container using flexbox for layout */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual team member styling */
+.team-member {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background, consistent with services */
+    border-radius: 5px;
+}
+
+/* Team member name styling */
+.member-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Team member title, background, experience, and bio styling */
+.member-title, .member-background, .member-experience, .member-bio {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+/* Team member email styling */
+.member-email {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+/* Team member email link styling */
+.member-email a {
+    color: #000000; /* Black for links */
+    text-decoration: none;
+}
+
+/* Team member email link hover effect */
+.member-email a:hover {
+    color: #555555; /* Medium gray on hover */
+}
+
+/* Stats section styling, used on About and Homepage */
+.stats {
+    padding: 50px 20px;
+    background-color: #d5d5d5; /* Medium gray background */
+    text-align: center;
+}
+
+/* Stats heading styling for About page */
+.stats-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Stats container using flexbox */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual stat item styling */
+.stat-item {
+    flex: 1;
+    min-width: 150px;
+    padding: 20px;
+}
+
+/* Stat number styling for emphasis */
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Stat description styling */
+.stat-description {
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Values section styling for About page */
+.values {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for clean look */
+}
+
+/* Values heading styling */
+.values-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Values container using flexbox for layout */
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual value item styling */
+.value-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background, consistent with other items */
+    border-radius: 5px;
+}
+
+/* Value title styling */
+.value-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Value description styling */
+.value-description {
+    font-size: 1em;
+    color: #333333;
+}
+
+/* Page Header section styling for Contact and Case Studies pages */
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5; /* Light gray background, consistent with hero */
+}
+
+/* Page header heading styling */
+.header-heading {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Page header subheading styling */
+.header-subheading {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333333; /* Dark gray for subtle contrast */
+}
+
+/* Page header description styling */
+.header-description {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555555; /* Medium gray for readability */
+}
+
+/* Contact Information section styling for Contact page */
+.contact-info {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for clean look */
+}
+
+/* Contact heading styling for company details */
+.contact-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Contact subheading styling for phone, email, hours, and emergency sections */
+.contact-subheading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Contact details, phone, email, hours, and emergency containers */
+.contact-details, .contact-phone, .contact-email, .contact-hours, .contact-emergency {
+    margin-bottom: 20px;
+}
+
+/* Contact info link styling */
+.contact-phone a, .contact-email a {
+    color: #000000; /* Black for links */
+    text-decoration: none;
+}
+
+/* Contact info link hover effect */
+.contact-phone a:hover, .contact-email a:hover {
+    color: #555555; /* Medium gray on hover */
+}
+
+/* Contact Form section styling */
+.contact-form {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+}
+
+/* Form element styling */
+.form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Fieldset styling for form sections */
+.form-fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background, consistent with other items */
+    border-radius: 5px;
+    border: none;
+}
+
+/* Form legend styling */
+.form-legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Form group for each input/select/textarea */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form label styling */
+.form-group label {
+    display: block;
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+/* Required field indicator */
+.required {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Input and textarea styling */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    color: #000000;
+}
+
+/* Textarea specific styling */
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Radio group styling */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Radio input and label styling */
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Checkbox styling */
+.form-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Checkbox label styling */
+.form-group input[type="checkbox"] + label {
+    display: inline;
+}
+
+/* Form actions container */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Office Locations section styling */
+.offices {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background */
+}
+
+/* Offices heading styling */
+.offices-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Offices container using flexbox */
+.offices-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual office item styling */
+.office-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background, consistent with other items */
+    border-radius: 5px;
+}
+
+/* Office title styling */
+.office-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Office link styling */
+.office-item a {
+    color: #000000; /* Black for links */
+    text-decoration: none;
+}
+
+/* Office link hover effect */
+.office-item a:hover {
+    color: #555555; /* Medium gray on hover */
+}
+
+/* Quick Actions section styling */
+.quick-actions {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #d5d5d5; /* Medium gray background, consistent with stats */
+}
+
+/* Quick Actions heading styling */
+.quick-actions-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Quick Actions container using flexbox */
+.quick-actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual action item styling */
+.action-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background, consistent with other items */
+    border-radius: 5px;
+}
+
+/* Action title styling */
+.action-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Action description styling */
+.action-description {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Case Study section styling for Case Studies page */
+.case-study {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for clean look */
+}
+
+/* Case study heading styling */
+.case-study-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Case study subheading styling */
+.case-study-subheading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Case study info, challenge, solution, and results containers */
+.case-study-info, .case-study-challenge, .case-study-solution, .case-study-results {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Case study quote styling */
+.case-study-quote blockquote {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #333333; /* Dark gray for emphasis */
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 10px;
+    border-left: 3px solid #cccccc; /* Light gray border for quote */
+}
+
+/* Case study results list styling */
+.case-study-results ul {
+    list-style: none;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Case study results list item styling */
+.case-study-results li {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Metrics Table section styling for Case Studies page */
+.metrics-table {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+}
+
+/* Table heading styling */
+.table-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Data table styling */
+.data-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Table caption styling */
+.data-table caption {
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Table header styling */
+.data-table th {
+    background-color: #d5d5d5; /* Medium gray background */
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Light gray border */
+}
+
+/* Table data cell styling */
+.data-table td {
+    padding: 10px;
+    border: 1px solid #cccccc; /* Light gray border */
+    color: #333333;
+}
+
+/* Alternating row background for readability */
+.data-table tr:nth-child(even) {
+    background-color: #e5e5e5; /* Light gray for even rows */
+}
+
+/* ROI Calculator section styling */
+.roi-calculator {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background */
+}
+
+/* ROI heading styling */
+.roi-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* ROI description styling */
+.roi-description {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: #555555;
+}
+
+/* ROI metrics list styling */
+.roi-metrics {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* ROI metrics list item styling */
+.roi-metrics li {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Testimonials section styling */
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #d5d5d5; /* Medium gray background, consistent with stats */
+}
+
+/* Testimonials heading styling */
+.testimonials-heading {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+/* Testimonials container using flexbox */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual testimonial item styling */
+.testimonial-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #e5e5e5; /* Light gray background, consistent with other items */
+    border-radius: 5px;
+}
+
+/* Testimonial quote styling */
+.testimonial-item blockquote {
+    font-size: 1em;
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Testimonial author styling */
+.testimonial-author {
+    font-size: 0.9em;
+    color: #555555;
+}
+
+/* Email-specific styles (to be inlined for emails) */
+
+/* Email container styling */
+.email .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White background for email body */
+}
+
+/* Email header styling */
+.email .header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #F3F4F6; /* Light gray background for email header */
+}
+
+/* Email logo styling */
+.email .header img {
+    width: 200px;
+    height: auto;
+}
+
+/* Email headline styling */
+.email .header h1 {
+    font-size: 24px;
+    color: #111827; /* Dark gray text */
+    margin: 10px 0;
+}
+
+/* Email date styling for newsletter */
+.email .header p {
+    font-size: 14px;
+    color: #111827;
+}
+
+/* Email content section styling */
+.email .content {
+    padding: 20px;
+}
+
+/* Email subheading styling */
+.email .content h2 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+/* Email body text styling */
+.email .content p {
+    font-size: 14px;
+    color: #111827;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Email list styling */
+.email .content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* Email list item styling */
+.email .content li {
+    font-size: 14px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+/* Email article container styling */
+.email .article {
+    margin-bottom: 20px;
+}
+
+/* Email hero image styling */
+.email .article img {
+    width: 600px;
+    height: auto;
+}
+
+/* Email button container styling */
+.email .btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Email primary button styling */
+.email .btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    min-height: 44px;
+    background-color: #2563EB; /* Blue background */
+    color: #ffffff; /* White text */
+}
+
+/* Email secondary button styling */
+.email .btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    min-height: 44px;
+    background-color: #F3F4F6; /* Light gray background */
+    color: #2563EB; /* Blue text */
+    border: 1px solid #2563EB; /* Blue border */
+}
+
+/* Email footer styling */
+.email .footer {
+    background-color: #F3F4F6; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Email footer text styling */
+.email .footer p {
+    font-size: 12px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+/* Email footer link styling */
+.email .footer a {
+    color: #2563EB; /* Blue for links */
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Email footer link hover effect */
+.email .footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for email on mobile */
+@media only screen and (max-width: 480px) {
+    .email .container {
+        width: 100% !important;
+    }
+    .email .content {
+        padding: 10px !important;
+    }
+    .email .article img {
+        width: 100% !important;
+    }
+    .email .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Footer styling, reused for all web pages */
+.footer {
+    padding: 20px;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    text-align: center;
+}
+
+/* Footer company info styling */
+.footer-company {
+    margin-bottom: 10px;
+}
+
+/* Footer contact info styling */
+.footer-contact {
+    font-size: 0.9em;
+}
+
+/* Footer link styling for web pages */
+.footer-contact a {
+    color: #cccccc; /* Light gray for links */
+    text-decoration: none;
+}
+
+/* Hover effect for footer links on web pages */
+.footer-contact a:hover {
+    color: #ffffff; /* White on hover */
+}
