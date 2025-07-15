@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Setting character encoding to UTF-8 for universal compatibility -->
+    <meta charset="UTF-8">
+    <!-- Ensuring responsive design for various devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta description for SEO, as provided -->
+    <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations.">
+    <!-- Page title, as provided -->
+    <title>Contact Us - Tatua Solutions</title>
+    <!-- Linking favicon for browser tab icon -->
+    <link rel="icon" href="assets/tatua-favicon.png" type="image/png">
+    <!-- Linking external CSS file for styling, reusing styles from previous pages -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section for logo and branding, consistent with other pages -->
+    <header id="header" class="header">
+        <!-- Using img for logo with alt text for accessibility -->
+        <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
+    </header>
+
+    <!-- Navigation breadcrumb for user orientation -->
+    <nav id="breadcrumb" class="breadcrumb">
+        <!-- Breadcrumb links for navigation hierarchy -->
+        <a href="index.html">Home</a> > <span>Contact</span>
+    </nav>
+
+    <!-- Page Header section to introduce the contact page -->
+    <section id="page-header" class="page-header">
+        <!-- Main heading for the section -->
+        <h1 class="header-heading">Get in Touch</h1>
+        <!-- Subheading to reinforce the call to action -->
+        <h2 class="header-subheading">Ready to transform your support operations?</h2>
+        <!-- Description to provide context -->
+        <p class="header-description">Our team is here to help you find the perfect solution for your business needs. Whether you're looking to start a trial, need technical support, or want to explore partnership opportunities, we're ready to help.</p>
+    </section>
+
+    <!-- Contact Information section for company details and contact methods -->
+    <section id="contact-info" class="contact-info">
+        <!-- Company details -->
+        <div class="contact-details">
+            <h2 class="contact-heading">Tatua Solutions Inc.</h2>
+            <p>123 Innovation Drive, Suite 400</p>
+            <p>San Francisco, CA 94105</p>
+        </div>
+        <!-- Phone numbers -->
+        <div class="contact-phone">
+            <h3 class="contact-subheading">Phone Numbers</h3>
+            <p>Main: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p>Sales: <a href="tel:+15551234568">+1 (555) 123-4568</a></p>
+            <p>Support: <a href="tel:+15551234569">+1 (555) 123-4569</a></p>
+        </div>
+        <!-- Email addresses -->
+        <div class="contact-email">
+            <h3 class="contact-subheading">Email Addresses</h3>
+            <p>General Inquiries: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+            <p>Sales: <a href="mailto:sales@tatua.com">sales@tatua.com</a></p>
+            <p>Support: <a href="mailto:support@tatua.com">support@tatua.com</a></p>
+            <p>Partnerships: <a href="mailto:partners@tatua.com">partners@tatua.com</a></p>
+        </div>
+        <!-- Business hours -->
+        <div class="contact-hours">
+            <h3 class="contact-subheading">Business Hours</h3>
+            <p>Monday - Friday: 8:00 AM - 6:00 PM PST</p>
+            <p>Saturday: 10:00 AM - 2:00 PM PST</p>
+            <p>Sunday: Closed</p>
+        </div>
+        <!-- Emergency support -->
+        <div class="contact-emergency">
+            <h3 class="contact-subheading">Emergency Support</h3>
+            <p>24/7 emergency support available for Enterprise customers</p>
+        </div>
+    </section>
+
+    <!-- Contact Form section -->
+    <section id="contact-form" class="contact-form">
+        <!-- Form element with no action since JavaScript is not allowed -->
+        <form id="contact-form-element" class="form">
+            <!-- Personal Information fieldset -->
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Contact Information</legend>
+                <!-- Full Name input -->
+                <div class="form-group">
+                    <label for="full-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50" placeholder="Enter your full name">
+                </div>
+                <!-- Email Address input -->
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="you@company.com">
+                </div>
+                <!-- Company Name input -->
+                <div class="form-group">
+                    <label for="company-name">Company Name <span class="required">*</span></label>
+                    <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100" placeholder="Your company name">
+                </div>
+                <!-- Phone Number input -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                </div>
+            </fieldset>
+
+            <!-- Inquiry Details fieldset -->
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Tell us about your needs</legend>
+                <!-- Inquiry Type select -->
+                <div class="form-group">
+                    <label for="inquiry-type">Inquiry Type <span class="required">*</span></label>
+                    <select id="inquiry-type" name="inquiry-type" required>
+                        <option value="">Please select...</option>
+                        <option value="sales">Sales Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="general">General Question</option>
+                        <option value="demo">Demo Request</option>
+                    </select>
+                </div>
+                <!-- Company Size select -->
+                <div class="form-group">
+                    <label for="company-size">Company Size <span class="required">*</span></label>
+                    <select id="company-size" name="company-size" required>
+                        <option value="">Please select...</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-1000">201-1000 employees</option>
+                        <option value="1000+">1000+ employees</option>
+                    </select>
+                </div>
+                <!-- Current Ticketing System select -->
+                <div class="form-group">
+                    <label for="ticketing-system">Current Ticketing System</label>
+                    <select id="ticketing-system" name="ticketing-system">
+                        <option value="none">None currently</option>
+                        <option value="zendesk">Zendesk</option>
+                        <option value="servicenow">ServiceNow</option>
+                        <option value="freshdesk">Freshdesk</option>
+                        <option value="jira">Jira Service Management</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- Budget Range select -->
+                <div class="form-group">
+                    <label for="budget-range">Budget Range</label>
+                    <select id="budget-range" name="budget-range">
+                        <option value="under-1000">Under $1,000/month</option>
+                        <option value="1000-5000">$1,000 - $5,000/month</option>
+                        <option value="5000-15000">$5,000 - $15,000/month</option>
+                        <option value="15000+">$15,000+/month</option>
+                        <option value="enterprise">Enterprise (custom pricing)</option>
+                    </select>
+                </div>
+                <!-- Implementation Timeline select -->
+                <div class="form-group">
+                    <label for="timeline">Implementation Timeline</label>
+                    <select id="timeline" name="timeline">
+                        <option value="immediate">Immediate (within 1 month)</option>
+                        <option value="1-3">1-3 months</option>
+                        <option value="3-6">3-6 months</option>
+                        <option value="6+">6+ months</option>
+                        <option value="exploring">Just exploring options</option>
+                    </select>
+                </div>
+                <!-- Message textarea -->
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" required minlength="10" maxlength="500" rows="5" placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Preferences fieldset -->
+            <fieldset class="form-fieldset">
+                <legend class="form-legend">Communication Preferences</legend>
+                <!-- Preferred Contact Method radio -->
+                <div class="form-group">
+                    <label>Preferred Contact Method <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                        <label for="contact-email">Email</label>
+                        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                        <label for="contact-phone">Phone</label>
+                        <input type="radio" id="contact-video" name="contact-method" value="video">
+                        <label for="contact-video">Video Call</label>
+                    </div>
+                </div>
+                <!-- Best Time to Contact radio -->
+                <div class="form-group">
+                    <label>Best Time to Contact</label>
+                    <div class="radio-group">
+                        <input type="radio" id="time-morning" name="contact-time" value="morning">
+                        <label for="time-morning">Morning (9 AM - 12 PM PST)</label>
+                        <input type="radio" id="time-afternoon" name="contact-time" value="afternoon">
+                        <label for="time-afternoon">Afternoon (12 PM - 5 PM PST)</label>
+                        <input type="radio" id="time-evening" name="contact-time" value="evening">
+                        <label for="time-evening">Evening (5 PM - 8 PM PST)</label>
+                    </div>
+                </div>
+                <!-- Newsletter Subscription checkbox -->
+                <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Yes, I'd like to receive product updates and industry insights</label>
+                </div>
+                <!-- Terms Agreement checkbox -->
+                <div class="form-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+            </fieldset>
+
+            <!-- Form actions -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Office Locations section -->
+    <section id="offices" class="offices">
+        <!-- Section heading -->
+        <h2 class="offices-heading">Visit Our Offices</h2>
+        <!-- Container for office locations -->
+        <div class="offices-container">
+            <!-- Primary Office -->
+            <div class="office-item">
+                <h3 class="office-title">San Francisco Headquarters</h3>
+                <p>123 Innovation Drive, Suite 400</p>
+                <p>San Francisco, CA 94105</p>
+                <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            </div>
+            <!-- Satellite Office -->
+            <div class="office-item">
+                <h3 class="office-title">New York Office</h3>
+                <p>456 Business Plaza, Floor 12</p>
+                <p>New York, NY 10001</p>
+                <p>Phone: <a href="tel:+15551234570">+1 (555) 123-4570</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions section -->
+    <section id="quick-actions" class="quick-actions">
+        <!-- Section heading -->
+        <h2 class="quick-actions-heading">Quick Actions</h2>
+        <!-- Container for action items -->
+        <div class="quick-actions-container">
+            <!-- Action 1 -->
+            <div class="action-item">
+                <h3 class="action-title">Start Free Trial</h3>
+                <p class="action-description">Get up and running in minutes with our 14-day free trial</p>
+                <a href="#" class="btn btn-primary">Start Now</a>
+            </div>
+            <!-- Action 2 -->
+            <div class="action-item">
+                <h3 class="action-title">Schedule Demo</h3>
+                <p class="action-description">See Tatua in action with a personalized 30-minute demo</p>
+                <a href="#" class="btn btn-primary">Book Demo</a>
+            </div>
+            <!-- Action 3 -->
+            <div class="action-item">
+                <h3 class="action-title">Download Resources</h3>
+                <p class="action-description">Access our implementation guide and best practices documentation</p>
+                <a href="#" class="btn btn-primary">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section, reused from previous pages -->
+    <footer id="footer" class="footer">
+        <!-- Company information -->
+        <p class="footer-company">© 2025 Tatua Solutions Inc.</p>
+        <!-- Contact information container -->
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+            <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+        </div>
+    </footer>
+</body>
+</html>
