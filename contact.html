@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Header section for logo and branding, consistent with other pages -->
-    <header id="header" class="header">
+    <header class="header">
         <div class="logo-container">
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
@@ -34,13 +34,40 @@
     </header>
 
     <!-- Navigation breadcrumb for user orientation -->
-    <nav id="breadcrumb" class="breadcrumb">
+    <nav class="breadcrumb">
         <!-- Breadcrumb links for navigation hierarchy -->
         <a href="index.html">Home</a> > <span>Contact</span>
     </nav>
 
+    <!-- Circular Dial Navigation -->
+    <nav class="dial-nav" id="dial-nav">
+        <div class="dial-center">
+            <div class="dial-indicator"></div>
+        </div>
+        <div class="dial-item" data-target="#header-section" style="--angle: 0deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Touch</span>
+        </div>
+        <div class="dial-item" data-target="#contact-info" style="--angle: 72deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Info</span>
+        </div>
+        <div class="dial-item" data-target="#contact-form" style="--angle: 144deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Form</span>
+        </div>
+        <div class="dial-item" data-target="#offices" style="--angle: 216deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Offices</span>
+        </div>
+        <div class="dial-item" data-target="#quick-actions" style="--angle: 288deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Actions</span>
+        </div>
+    </nav>
+
     <!-- Page Header section to introduce the contact page -->
-    <section id="page-header" class="page-header">
+    <section id="header-section" class="page-header section-fullheight">
         <!-- Main heading for the section -->
         <h1 class="header-heading">Get in Touch</h1>
         <!-- Subheading to reinforce the call to action -->
@@ -50,46 +77,48 @@
     </section>
 
     <!-- Contact Information section for company details and contact methods -->
-    <section id="contact-info" class="contact-info">
-        <!-- Company details -->
-        <address class="contact-details">
-            <h2 class="contact-heading">Tatua Solutions Inc.</h2>
-            <p>123 Innovation Drive, Suite 400</p>
-            <p>San Francisco, CA 94105</p>
-        </address>
-        <!-- Phone numbers -->
-        <div class="contact-phone">
-            <h3 class="contact-subheading">Phone Numbers</h3>
-            <p>Main: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-            <p>Sales: <a href="tel:+15551234568">+1 (555) 123-4568</a></p>
-            <p>Support: <a href="tel:+15551234569">+1 (555) 123-4569</a></p>
-        </div>
-        <!-- Email addresses -->
-        <div class="contact-email">
-            <h3 class="contact-subheading">Email Addresses</h3>
-            <p>General Inquiries: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
-            <p>Sales: <a href="mailto:sales@tatua.com">sales@tatua.com</a></p>
-            <p>Support: <a href="mailto:support@tatua.com">support@tatua.com</a></p>
-            <p>Partnerships: <a href="mailto:partners@tatua.com">partners@tatua.com</a></p>
-        </div>
-        <!-- Business hours -->
-        <div class="contact-hours">
-            <h3 class="contact-subheading">Business Hours</h3>
-            <p>Monday - Friday: 8:00 AM - 6:00 PM PST</p>
-            <p>Saturday: 10:00 AM - 2:00 PM PST</p>
-            <p>Sunday: Closed</p>
-        </div>
-        <!-- Emergency support -->
-        <div class="contact-emergency">
-            <h3 class="contact-subheading">Emergency Support</h3>
-            <p>24/7 emergency support available for Enterprise customers</p>
+    <section id="contact-info" class="contact-info section-fullheight">
+        <div class="contact-content">
+            <!-- Company details -->
+            <address class="contact-details">
+                <h2 class="contact-heading">Tatua Solutions Inc.</h2>
+                <p>123 Innovation Drive, Suite 400</p>
+                <p>San Francisco, CA 94105</p>
+            </address>
+            <!-- Phone numbers -->
+            <div class="contact-phone">
+                <h3 class="contact-subheading">Phone Numbers</h3>
+                <p>Main: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                <p>Sales: <a href="tel:+15551234568">+1 (555) 123-4568</a></p>
+                <p>Support: <a href="tel:+15551234569">+1 (555) 123-4569</a></p>
+            </div>
+            <!-- Email addresses -->
+            <div class="contact-email">
+                <h3 class="contact-subheading">Email Addresses</h3>
+                <p>General Inquiries: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
+                <p>Sales: <a href="mailto:sales@tatua.com">sales@tatua.com</a></p>
+                <p>Support: <a href="mailto:support@tatua.com">support@tatua.com</a></p>
+                <p>Partnerships: <a href="mailto:partners@tatua.com">partners@tatua.com</a></p>
+            </div>
+            <!-- Business hours -->
+            <div class="contact-hours">
+                <h3 class="contact-subheading">Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM PST</p>
+                <p>Saturday: 10:00 AM - 2:00 PM PST</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <!-- Emergency support -->
+            <div class="contact-emergency">
+                <h3 class="contact-subheading">Emergency Support</h3>
+                <p>24/7 emergency support available for Enterprise customers</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Form section -->
-    <section id="contact-form" class="contact-form">
+    <section id="contact-form" class="contact-form section-fullheight">
         <!-- Form element with no action since JavaScript is not allowed -->
-        <form id="contact-form-element" class="form">
+        <form class="form">
             <!-- Personal Information fieldset -->
             <fieldset class="form-fieldset">
                 <legend class="form-legend">Contact Information</legend>
@@ -231,7 +260,7 @@
     </section>
 
     <!-- Office Locations section -->
-    <section id="offices" class="offices">
+    <section id="offices" class="offices section-fullheight">
         <!-- Section heading -->
         <h2 class="offices-heading">Visit Our Offices</h2>
         <!-- Container for office locations -->
@@ -254,7 +283,7 @@
     </section>
 
     <!-- Quick Actions section -->
-    <section id="quick-actions" class="quick-actions">
+    <section id="quick-actions" class="quick-actions section-fullheight">
         <!-- Section heading -->
         <h2 class="quick-actions-heading">Quick Actions</h2>
         <!-- Container for action items -->
@@ -280,8 +309,11 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+
     <!-- Footer section, reused from previous pages -->
-    <footer id="footer" class="footer">
+    <footer class="footer">
         <!-- Company information -->
         <p class="footer-company">© 2025 Tatua Solutions Inc.</p>
         <!-- Contact information container -->
@@ -291,5 +323,66 @@
             <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
         </div>
     </footer>
+
+    <script>
+        // Dial navigation functionality
+        const dialItems = document.querySelectorAll('.dial-item');
+        const dialCenter = document.querySelector('.dial-center');
+        
+        // Smooth scrolling for dial navigation
+        dialItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('data-target');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Highlight active section in dial navigation
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            dialItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-target') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Dial rotation effect based on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            const rotation = scrollPercent * 360;
+            dialCenter.style.transform = `rotate(${rotation}deg)`;
+        });
+    </script>
 </body>
 </html>

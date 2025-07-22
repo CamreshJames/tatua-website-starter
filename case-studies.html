@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Header section for logo and branding, consistent with other pages -->
-    <header id="header" class="header">
+    <header class="header">
         <div class="logo-container">
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
@@ -34,13 +34,44 @@
     </header>
 
     <!-- Navigation breadcrumb for user orientation -->
-    <nav id="breadcrumb" class="breadcrumb">
+    <nav class="breadcrumb">
         <!-- Breadcrumb links for navigation hierarchy -->
         <a href="index.html">Home</a> > <span>Case Studies</span>
     </nav>
 
+    <!-- Circular Dial Navigation -->
+    <nav class="dial-nav" id="dial-nav">
+        <div class="dial-center">
+            <div class="dial-indicator"></div>
+        </div>
+        <div class="dial-item" data-target="#header-section" style="--angle: 0deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Stories</span>
+        </div>
+        <div class="dial-item" data-target="#case-study-1" style="--angle: 60deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">TechFlow</span>
+        </div>
+        <div class="dial-item" data-target="#case-study-2" style="--angle: 120deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">HealthCare</span>
+        </div>
+        <div class="dial-item" data-target="#case-study-3" style="--angle: 180deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">RetailMax</span>
+        </div>
+        <div class="dial-item" data-target="#metrics" style="--angle: 240deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Metrics</span>
+        </div>
+        <div class="dial-item" data-target="#testimonials" style="--angle: 300deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Reviews</span>
+        </div>
+    </nav>
+
     <!-- Page Header section to introduce the case studies -->
-    <section id="page-header" class="page-header">
+    <section id="header-section" class="page-header section-fullheight">
         <!-- Main heading for the section -->
         <h1 class="header-heading">Customer Success Stories</h1>
         <!-- Subheading to reinforce the theme -->
@@ -50,7 +81,7 @@
     </section>
 
     <!-- Case Study 1 section -->
-    <section id="case-study-1" class="case-study">
+    <section id="case-study-1" class="case-study section-fullheight">
         <h2 class="case-study-heading">TechFlow Solutions</h2>
         <!-- Company information -->
         <div class="case-study-info">
@@ -87,7 +118,7 @@
     </section>
 
     <!-- Case Study 2 section -->
-    <section id="case-study-2" class="case-study">
+    <section id="case-study-2" class="case-study section-fullheight">
         <h2 class="case-study-heading">HealthCare Partners</h2>
         <!-- Company information -->
         <div class="case-study-info">
@@ -124,7 +155,7 @@
     </section>
 
     <!-- Case Study 3 section -->
-    <section id="case-study-3" class="case-study">
+    <section id="case-study-3" class="case-study section-fullheight">
         <h2 class="case-study-heading">RetailMax Corporation</h2>
         <!-- Company information -->
         <div class="case-study-info">
@@ -161,7 +192,7 @@
     </section>
 
     <!-- Performance Metrics Table section -->
-    <section id="performance-metrics" class="metrics-table">
+    <section id="metrics" class="metrics-table section-fullheight">
         <h2 class="table-heading">Tatua Implementation Results</h2>
         <table class="data-table">
             <caption>Tatua Implementation Results - Before vs After Comparison</caption>
@@ -226,170 +257,8 @@
         </table>
     </section>
 
-    <!-- Feature Comparison Table section -->
-    <section id="feature-comparison" class="metrics-table">
-        <h2 class="table-heading">Tatua Pricing Plans</h2>
-        <table class="data-table">
-            <caption>Tatua Pricing Plans - Feature Comparison</caption>
-            <thead>
-                <tr>
-                    <th>Feature</th>
-                    <th>Basic Plan</th>
-                    <th>Pro Plan</th>
-                    <th>Enterprise</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monthly Ticket Volume</td>
-                    <td>1,000</td>
-                    <td>10,000</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>Agent Users</td>
-                    <td>5</td>
-                    <td>25</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>Customer Portal</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Customizable</td>
-                </tr>
-                <tr>
-                    <td>Email Integration</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Advanced</td>
-                </tr>
-                <tr>
-                    <td>API Access</td>
-                    <td>Limited</td>
-                    <td>Full</td>
-                    <td>Full + Priority</td>
-                </tr>
-                <tr>
-                    <td>Integrations</td>
-                    <td>10</td>
-                    <td>50</td>
-                    <td>All Available</td>
-                </tr>
-                <tr>
-                    <td>Custom Fields</td>
-                    <td>5</td>
-                    <td>25</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>Automation Rules</td>
-                    <td>10</td>
-                    <td>50</td>
-                    <td>Unlimited</td>
-                </tr>
-                <tr>
-                    <td>SLA Management</td>
-                    <td>Basic</td>
-                    <td>Advanced</td>
-                    <td>Enterprise</td>
-                </tr>
-                <tr>
-                    <td>Reporting</td>
-                    <td>Standard</td>
-                    <td>Advanced</td>
-                    <td>Custom</td>
-                </tr>
-                <tr>
-                    <td>Support Level</td>
-                    <td>Email</td>
-                    <td>Email + Chat</td>
-                    <td>24/7 Phone</td>
-                </tr>
-                <tr>
-                    <td>Implementation</td>
-                    <td>Self-service</td>
-                    <td>Guided</td>
-                    <td>Dedicated Manager</td>
-                </tr>
-                <tr>
-                    <td>Monthly Price</td>
-                    <td>$29</td>
-                    <td>$99</td>
-                    <td>Custom Pricing</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Industry Metrics Table section -->
-    <section id="industry-metrics" class="metrics-table">
-        <h2 class="table-heading">Industry Benchmarks</h2>
-        <table class="data-table">
-            <caption>Industry Benchmarks vs Tatua Customer Performance</caption>
-            <thead>
-                <tr>
-                    <th>Industry</th>
-                    <th>Industry Average Response</th>
-                    <th>Tatua Customer Average</th>
-                    <th>Improvement</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Technology</td>
-                    <td>5.2 hours</td>
-                    <td>1.6 hours</td>
-                    <td>69% better</td>
-                </tr>
-                <tr>
-                    <td>Healthcare</td>
-                    <td>3.8 hours</td>
-                    <td>1.2 hours</td>
-                    <td>68% better</td>
-                </tr>
-                <tr>
-                    <td>E-commerce</td>
-                    <td>4.5 hours</td>
-                    <td>1.4 hours</td>
-                    <td>69% better</td>
-                </tr>
-                <tr>
-                    <td>Financial Services</td>
-                    <td>2.9 hours</td>
-                    <td>0.8 hours</td>
-                    <td>72% better</td>
-                </tr>
-                <tr>
-                    <td>Manufacturing</td>
-                    <td>8.1 hours</td>
-                    <td>2.3 hours</td>
-                    <td>72% better</td>
-                </tr>
-                <tr>
-                    <td>Education</td>
-                    <td>6.7 hours</td>
-                    <td>2.1 hours</td>
-                    <td>69% better</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- ROI Calculator section -->
-    <section id="roi-calculator" class="roi-calculator">
-        <h2 class="roi-heading">Calculate Your Potential ROI</h2>
-        <p class="roi-description">Based on our customer data, here's what companies typically save:</p>
-        <ul class="roi-metrics">
-            <li><strong>Average cost savings:</strong> $2,400 per agent per month</li>
-            <li><strong>Productivity improvement:</strong> 87% increase in tickets resolved</li>
-            <li><strong>Customer retention:</strong> 15% improvement on average</li>
-            <li><strong>Implementation time:</strong> 2-4 weeks typical setup</li>
-        </ul>
-    </section>
-
     <!-- Testimonials section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials section-fullheight">
         <h2 class="testimonials-heading">What Our Customers Say</h2>
         <div class="testimonials-container">
             <div class="testimonial-item">
@@ -407,8 +276,11 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+
     <!-- Footer section, reused from previous pages -->
-    <footer id="footer" class="footer">
+    <footer class="footer">
         <!-- Company information -->
         <p class="footer-company">© 2025 Tatua Solutions Inc.</p>
         <!-- Contact information container -->
@@ -418,5 +290,66 @@
             <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
         </div>
     </footer>
+
+    <script>
+        // Dial navigation functionality
+        const dialItems = document.querySelectorAll('.dial-item');
+        const dialCenter = document.querySelector('.dial-center');
+        
+        // Smooth scrolling for dial navigation
+        dialItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('data-target');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Highlight active section in dial navigation
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            dialItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-target') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Dial rotation effect based on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            const rotation = scrollPercent * 360;
+            dialCenter.style.transform = `rotate(${rotation}deg)`;
+        });
+    </script>
 </body>
 </html>

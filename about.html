@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Header section for logo and branding -->
-    <header id="header" class="header">
+    <header class="header">
         <div class="logo-container">
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
@@ -34,13 +34,40 @@
     </header>
 
     <!-- Navigation breadcrumb for user orientation -->
-    <nav id="breadcrumb" class="breadcrumb">
+    <nav class="breadcrumb">
         <!-- Breadcrumb links for navigation hierarchy -->
         <a href="index.html">Home</a> &gt; <span>About</span>
     </nav>
 
+    <!-- Circular Dial Navigation -->
+    <nav class="dial-nav" id="dial-nav">
+        <div class="dial-center">
+            <div class="dial-indicator"></div>
+        </div>
+        <div class="dial-item" data-target="#story" style="--angle: 0deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Story</span>
+        </div>
+        <div class="dial-item" data-target="#mission" style="--angle: 72deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Mission</span>
+        </div>
+        <div class="dial-item" data-target="#team" style="--angle: 144deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Team</span>
+        </div>
+        <div class="dial-item" data-target="#stats" style="--angle: 216deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Stats</span>
+        </div>
+        <div class="dial-item" data-target="#values" style="--angle: 288deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Values</span>
+        </div>
+    </nav>
+
     <!-- Company Story section to share origin and purpose -->
-    <section id="company-story" class="company-story">
+    <section id="story" class="company-story section-fullheight">
         <!-- Section heading to introduce the content -->
         <h2 class="story-heading">Our Story</h2>
         <!-- Story content paragraphs -->
@@ -49,7 +76,7 @@
     </section>
 
     <!-- Mission Statement section to highlight company purpose -->
-    <section id="mission" class="mission">
+    <section id="mission" class="mission section-fullheight">
         <!-- Section heading -->
         <h2 class="mission-heading">Our Mission</h2>
         <!-- Mission statement content -->
@@ -57,7 +84,7 @@
     </section>
 
     <!-- Team section to showcase team members -->
-    <section id="team" class="team">
+    <section id="team" class="team section-fullheight">
         <!-- Section heading -->
         <h2 class="team-heading">Meet Our Team</h2>
         <!-- Container for team members, using flex or grid in CSS -->
@@ -102,7 +129,7 @@
     </section>
 
     <!-- Company Stats section to highlight key metrics -->
-    <section id="stats" class="stats">
+    <section id="stats" class="stats section-fullheight">
         <!-- Section heading -->
         <h2 class="stats-heading">By the Numbers</h2>
         <!-- Container for stats items, reusing flex or grid from homepage -->
@@ -135,7 +162,7 @@
     </section>
 
     <!-- Values section to highlight company principles -->
-    <section id="values" class="values">
+    <section id="values" class="values section-fullheight">
         <!-- Section heading -->
         <h2 class="values-heading">Our Values</h2>
         <!-- Container for value items, using flex or grid -->
@@ -159,8 +186,11 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+
     <!-- Footer section, reused from homepage for consistency -->
-    <footer id="footer" class="footer">
+    <footer class="footer">
         <!-- Company information -->
         <p class="footer-company">© 2025 Tatua Solutions Inc.</p>
         <!-- Contact information container -->
@@ -170,5 +200,66 @@
             <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
         </div>
     </footer>
+
+    <script>
+        // Dial navigation functionality
+        const dialItems = document.querySelectorAll('.dial-item');
+        const dialCenter = document.querySelector('.dial-center');
+        
+        // Smooth scrolling for dial navigation
+        dialItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('data-target');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Highlight active section in dial navigation
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            dialItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-target') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Dial rotation effect based on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            const rotation = scrollPercent * 360;
+            dialCenter.style.transform = `rotate(${rotation}deg)`;
+        });
+    </script>
 </body>
 </html>

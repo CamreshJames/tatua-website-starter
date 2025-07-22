@@ -13,13 +13,10 @@
     <link rel="icon" href="assets/tatua-favicon.png" type="image/png">
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="assets/style.css">
-
-    <!-- Linking Google Fonts for typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header section for logo and branding -->
-    <header id="header" class="header">
+    <header class="header">
         <div class="logo-container">
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
@@ -34,8 +31,27 @@
         </nav>
     </header>
 
+    <!-- Circular Dial Navigation -->
+    <nav class="dial-nav" id="dial-nav">
+        <div class="dial-center">
+            <div class="dial-indicator"></div>
+        </div>
+        <div class="dial-item" data-target="#hero" style="--angle: 0deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Hero</span>
+        </div>
+        <div class="dial-item" data-target="#services" style="--angle: 120deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Services</span>
+        </div>
+        <div class="dial-item" data-target="#stats" style="--angle: 240deg;">
+            <div class="dial-dot"></div>
+            <span class="dial-label">Stats</span>
+        </div>
+    </nav>
+
     <!-- Hero section for main promotional content -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero section-fullheight">
         <!-- Main headline for immediate user attention -->
         <h1 class="hero-headline">Streamline Your Support Operations</h1>
         <!-- Tagline to reinforce the product's value -->
@@ -52,7 +68,7 @@
     </section>
 
     <!-- Services section to highlight key features -->
-    <section id="services" class="services">
+    <section id="services" class="services section-fullheight">
         <!-- Section heading to introduce the content -->
         <h2 class="services-heading">Why Choose Tatua?</h2>
         <!-- Container for service items, using flex or grid in CSS -->
@@ -76,7 +92,7 @@
     </section>
 
     <!-- Stats section to showcase key metrics -->
-    <section id="stats" class="stats">
+    <section id="stats" class="stats section-fullheight">
         <!-- Container for stats items, likely using flex or grid -->
         <div class="stats-container">
             <!-- Individual stat item -->
@@ -99,8 +115,11 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">↑</button>
+
     <!-- Footer section for company and contact info -->
-    <footer id="footer" class="footer">
+    <footer class="footer">
         <!-- Company information -->
         <p class="footer-company">© 2025 Tatua Solutions Inc.</p>
         <!-- Contact information container -->
@@ -110,5 +129,66 @@
             <p>Address: 123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
         </div>
     </footer>
+
+    <script>
+        // Dial navigation functionality
+        const dialItems = document.querySelectorAll('.dial-item');
+        const dialCenter = document.querySelector('.dial-center');
+        
+        // Smooth scrolling for dial navigation
+        dialItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('data-target');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Highlight active section in dial navigation
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            dialItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-target') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Dial rotation effect based on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            const rotation = scrollPercent * 360;
+            dialCenter.style.transform = `rotate(${rotation}deg)`;
+        });
+    </script>
 </body>
 </html>
