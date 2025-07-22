@@ -1,217 +1,395 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Features: AI-Powered Ticket Routing & More</title>
-    <link rel="shortcut icon" href="../assets/tatua-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="tatua-favicon.png" type="image/x-icon">
+    <!-- Linking Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <style type="text/css">
         /* Reset styles */
         body { 
-            margin: 0; 
-            padding: 0; 
-            font-family: Arial, Helvetica, sans-serif; 
+            font-family: 'Lexend Deca', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
         }
-        table { 
-            border-collapse: collapse; 
+
+        table {
+            border-collapse: collapse;
         }
-        img { 
-            border: 0; 
-            outline: none; 
-            text-decoration: none; 
+
+        img {
+            border: 0;
+            outline: none;
+            text-decoration: none;
         }
-        a { 
-            color: #2563EB; 
-            text-decoration: none; 
+
+        a {
+            color: #ff8c42;
+            text-decoration: none;
         }
-        
+
         /* Main container */
-        .container { 
-            width: 100%; 
-            max-width: 600px; 
-            margin: 0 auto; 
-            background: #FFFFFF; 
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
         }
-        .header { 
-            background: #F3F4F6; 
-            padding: 20px; 
-            text-align: center; 
+
+        .header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 2px solid #ff8c42;
         }
-        .content { 
-            padding: 20px; 
+
+        .content {
+            padding: 40px 30px;
+            background: #1a1a1a;
         }
-        .footer { 
-            background: #F3F4F6; 
-            padding: 20px; 
-            font-size: 12px; 
-            color: #111827; 
-            text-align: center; 
+
+        .footer {
+            background: #0f0f0f;
+            padding: 30px;
+            font-size: 12px;
+            color: #cccccc;
+            text-align: center;
+            border-top: 1px solid #2a2a2a;
         }
 
         /* Typography */
-        .headline { 
-            font-size: 24px; 
-            color: #111827; 
-            font-weight: bold; 
+        .headline {
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .subheading { 
-            font-size: 18px; 
-            color: #111827; 
-            font-weight: bold; 
+
+        .newsletter-headline {
+            font-size: 32px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 8px rgba(255, 140, 66, 0.3);
         }
-        .body-text { 
-            font-size: 14px; 
-            color: #111827; 
-            line-height: 1.5; 
+
+        .subheading {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #ff8c42;
+            padding-left: 15px;
         }
-        .footer-text { 
-            font-size: 12px; 
-            color: #111827; 
+
+        .body-text {
+            font-size: 16px;
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-        
-        /* Buttons */
-        .button { 
-            display: inline-block; 
-            padding: 12px 24px; 
-            background: #2563EB; 
-            color: #FFFFFF !important; 
-            text-decoration: none; 
-            font-size: 14px; 
-            border-radius: 4px; 
-            min-height: 44px; 
-            line-height: 44px; 
-            text-align: center; 
+
+        .footer-text {
+            font-size: 13px;
+            color: #cccccc;
+            opacity: 0.8;
         }
-        
+
+        .newsletter-subtitle {
+            color: #cccccc;
+            font-size: 18px;
+            margin: 15px 0 0 0;
+            opacity: 0.9;
+        }
+
+        /* Enhanced Buttons - Outlook Compatible */
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff8c42;
+            /* Fallback for Outlook */
+            background: linear-gradient(135deg, #ff8c42 0%, #ff6b1a 100%);
+            color: #ffffff !important;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            min-height: 50px;
+            line-height: 50px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid #ff8c42;
+            mso-padding-alt: 15px 30px;
+            /* Outlook padding fix */
+        }
+
+        /* Outlook-specific button fixes */
+        .button a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            display: block;
+            mso-line-height-rule: exactly;
+        }
+
+        /* Feature sections */
+        .feature-section {
+            background: #242424;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #ff8c42;
+            border: 1px solid #2a2a2a;
+        }
+
+        .ai-feature {
+            background: #242424;
+            border-left: 4px solid #ff8c42;
+        }
+
+        .integration-feature {
+            background: #242424;
+            border-left: 4px solid #ff8c42;
+        }
+
+        .case-study-feature {
+            background: #242424;
+            border-left: 4px solid #ff8c42;
+        }
+
+        /* Updates section */
+        .updates-section {
+            background: #1f1f1f;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        /* Resources section */
+        .resources-section {
+            background: #1f1f1f;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #ff8c42;
+            border: 1px solid #2a2a2a;
+        }
+
+        /* Enhanced Lists */
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            color: #cccccc;
+        }
+
+        .feature-list strong {
+            color: #ffffff;
+        }
+
         /* Links */
-        .footer-link { color: #2563EB; margin: 0 5px; }
-        
+        .footer-link {
+            color: #ff8c42 !important;
+            margin: 0 8px;
+            opacity: 0.9;
+            text-decoration: underline;
+        }
+
         /* Responsive design */
         @media only screen and (max-width: 480px) {
-            .container { width: 100% !important; }
-            .content { padding: 10px !important; }
-            .button { display: block; width: 100%; box-sizing: border-box; }
-            .button-table { width: 100% !important; }
+            .container {
+                width: 95% !important;
+                margin: 10px auto !important;
+            }
+
+            .content {
+                padding: 20px !important;
+            }
+
+            .header {
+                padding: 25px 15px !important;
+            }
+
+            .button {
+                display: block;
+                width: 90%;
+                box-sizing: border-box;
+                margin: 10px auto;
+            }
+
+            .newsletter-headline {
+                font-size: 26px !important;
+            }
+
+            .headline {
+                font-size: 24px !important;
+            }
+
+            .subheading {
+                font-size: 18px !important;
+            }
         }
     </style>
 </head>
+
 <body>
     <table class="container" align="center" cellpadding="0" cellspacing="0">
         <!-- Header -->
         <tr>
             <td class="header">
-                <img src="../assets/tatua-logo.png" alt="Tatua Logo" width="200" style="display: block;" />
-                <p style="font-size: 14px; color: #111827; margin: 10px 0 0;">See what's new in your Tatua dashboard this month</p>
-                <h1 class="headline">What's New at Tatua</h1>
-                <p class="body-text">Monthly Update - January 2025</p>
+                <img src="https://raw.githubusercontent.com/CamreshJames/fe-email-client/refs/heads/main/src/main/resources/email-marketing/tatua-logo.png"
+                    alt="Tatua Logo" width="200" style="display: block; margin: 0 auto;" />
+                <p class="newsletter-subtitle">See what's new in your Tatua dashboard this month</p>
+                <h1 class="newsletter-headline">What's New at Tatua</h1>
+                <p class="newsletter-subtitle">Monthly Update - January 2025</p>
             </td>
         </tr>
         <!-- Content -->
         <tr>
             <td class="content">
                 <!-- Featured Article 1 -->
-                <h2 class="subheading">AI-Powered Routing Reduces Response Times by 40%</h2>
-                <p class="body-text">Our new machine learning algorithm automatically routes tickets to the best-qualified agent based on content analysis, agent expertise, and current workload.</p>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li>40% faster initial response times</li>
-                    <li>Better agent-issue matching</li>
-                    <li>Reduced escalations</li>
-                </ul>
+                <div class="feature-section ai-feature">
+                    <h2 class="subheading">AI-Powered Routing Reduces Response Times by 40%</h2>
+                    <p class="body-text">Our new machine learning algorithm automatically routes tickets to the
+                        best-qualified agent based on content analysis, agent expertise, and current workload.</p>
+                    <ul class="body-text feature-list" style="margin: 0; padding-left: 20px;">
+                        <li>40% faster initial response times</li>
+                        <li>Better agent-issue matching</li>
+                        <li>Reduced escalations</li>
+                    </ul>
+                </div>
                 <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
                     <tr>
                         <td align="center">
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Try AI Routing</a>
+                                        <a href="https://app.tatua.com/features/ai-routing"
+                                            style="color: #FFFFFF; text-decoration: none; display: block;"
+                                            target="_blank">Try AI Routing</a>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                 </table>
-                
+
                 <!-- Featured Article 2 -->
-                <h2 class="subheading">New Slack Integration Now Available</h2>
-                <p class="body-text">Connect your support workflow directly with Slack. Get notifications, update tickets, and collaborate with your team without leaving your chat platform.</p>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li>Real-time ticket notifications</li>
-                    <li>Ticket updates via Slack commands</li>
-                    <li>Team collaboration threads</li>
-                    <li>Custom notification rules</li>
-                </ul>
+                <div class="feature-section integration-feature">
+                    <h2 class="subheading">New Slack Integration Now Available</h2>
+                    <p class="body-text">Connect your support workflow directly with Slack. Get notifications, update
+                        tickets, and collaborate with your team without leaving your chat platform.</p>
+                    <ul class="body-text feature-list" style="margin: 0; padding-left: 20px;">
+                        <li>Real-time ticket notifications</li>
+                        <li>Ticket updates via Slack commands</li>
+                        <li>Team collaboration threads</li>
+                        <li>Custom notification rules</li>
+                    </ul>
+                </div>
                 <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
                     <tr>
                         <td align="center">
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Install Slack App</a>
+                                        <a href="https://slack.com/apps/tatua-integration"
+                                            style="color: #FFFFFF; text-decoration: none; display: block;"
+                                            target="_blank">Install Slack App</a>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                 </table>
-                
+
                 <!-- Featured Article 3 -->
-                <h2 class="subheading">Customer Spotlight: How MedTech Improved Satisfaction by 60%</h2>
-                <p class="body-text">Learn how MedTech Solutions used Tatua's automation features to handle 3x more tickets while improving their customer satisfaction scores.</p>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li>60% increase in customer satisfaction</li>
-                    <li>3x ticket volume handled</li>
-                    <li>50% reduction in response time</li>
-                    <li>25% improvement in first-contact resolution</li>
-                </ul>
+                <div class="feature-section case-study-feature">
+                    <h2 class="subheading">Customer Spotlight: How MedTech Improved Satisfaction by 60%</h2>
+                    <p class="body-text">Learn how MedTech Solutions used Tatua's automation features to handle 3x more
+                        tickets while improving their customer satisfaction scores.</p>
+                    <ul class="body-text feature-list" style="margin: 0; padding-left: 20px;">
+                        <li>60% increase in customer satisfaction</li>
+                        <li>3x ticket volume handled</li>
+                        <li>50% reduction in response time</li>
+                        <li>25% improvement in first-contact resolution</li>
+                    </ul>
+                </div>
                 <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
                     <tr>
                         <td align="center">
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Read Full Case Study</a>
+                                        <a href="https://tatua.com/case-studies/medtech-solutions"
+                                            style="color: #FFFFFF; text-decoration: none; display: block;"
+                                            target="_blank">Read Full Case Study</a>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                 </table>
-                
+
                 <!-- Additional Updates -->
-                <h2 class="subheading">More Improvements This Month</h2>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li><strong>Mobile App Performance:</strong> 30% faster loading times on iOS and Android</li>
-                    <li><strong>API Rate Limits:</strong> Increased limits for Enterprise customers</li>
-                    <li><strong>New Integrations:</strong> Salesforce, HubSpot, and Microsoft Teams now available</li>
-                    <li><strong>Security Enhancement:</strong> Two-factor authentication now required for admin accounts</li>
-                </ul>
-                
+                <div class="updates-section">
+                    <h2 class="subheading">More Improvements This Month</h2>
+                    <ul class="body-text feature-list" style="margin: 0; padding-left: 20px;">
+                        <li><strong>Mobile App Performance:</strong> 30% faster loading times on iOS and Android</li>
+                        <li><strong>API Rate Limits:</strong> Increased limits for Enterprise customers</li>
+                        <li><strong>New Integrations:</strong> Salesforce, HubSpot, and Microsoft Teams now available
+                        </li>
+                        <li><strong>Security Enhancement:</strong> Two-factor authentication now required for admin
+                            accounts</li>
+                    </ul>
+                </div>
+
                 <!-- Resources -->
-                <h2 class="subheading">Helpful Resources</h2>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li><strong>Webinar:</strong> "Advanced Automation Strategies" - January 25, 2:00 PM PST</li>
-                    <li><strong>Guide:</strong> <a href="#">"10 Best Practices for Ticket Management"</a> - Download our latest best practices guide</li>
-                    <li><strong>Community:</strong> <a href="#">"Join the Tatua User Community"</a> - Connect with other customers and share tips</li>
-                </ul>
+                <div class="resources-section">
+                    <h2 class="subheading">Helpful Resources</h2>
+                    <ul class="body-text feature-list" style="margin: 0; padding-left: 20px;">
+                        <li><strong>Webinar:</strong> "Advanced Automation Strategies" - January 25, 2:00 PM PST</li>
+                        <li><strong>Guide:</strong> <a href="https://tatua.com/resources/best-practices-guide"
+                                target="_blank">"10 Best Practices for Ticket Management"</a> -
+                            Download our latest best practices guide</li>
+                        <li><strong>Community:</strong> <a href="https://community.tatua.com" target="_blank">"Join the
+                                Tatua User Community"</a> - Connect
+                            with other customers and share tips</li>
+                    </ul>
+                </div>
             </td>
         </tr>
         <!-- Footer -->
         <tr>
             <td class="footer">
-                <p class="footer-text">Questions about these updates? Contact our team at <a href="mailto:updates@tatua.com">updates@tatua.com</a></p>
+                <p class="footer-text">Questions about these updates? Contact our team at <a
+                        href="mailto:updates@tatua.com">updates@tatua.com</a></p>
                 <p class="footer-text">
-                    <a href="#" class="footer-link">LinkedIn</a> | 
-                    <a href="#" class="footer-link">Twitter</a> | 
-                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="https://linkedin.com/company/tatua" class="footer-link" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/tatua" class="footer-link" target="_blank">Twitter</a> |
+                    <a href="https://facebook.com/tatua" class="footer-link" target="_blank">Facebook</a>
                 </p>
                 <p class="footer-text">
-                    <a href="#" class="footer-link">Privacy Policy</a> | 
-                    <a href="#" class="footer-link">Terms of Service</a> | 
-                    <a href="#" class="footer-link">Update Preferences</a> | 
-                    <a href="#" class="footer-link">Unsubscribe</a>
+                    <a href="https://tatua.com/privacy" class="footer-link" target="_blank">Privacy Policy</a> |
+                    <a href="https://tatua.com/terms" class="footer-link" target="_blank">Terms of Service</a> |
+                    <a href="https://tatua.com/preferences?email={{email}}" class="footer-link" target="_blank">Update
+                        Preferences</a> |
+                    <a href="https://tatua.com/unsubscribe?email={{email}}" class="footer-link"
+                        target="_blank">Unsubscribe</a>
                 </p>
             </td>
         </tr>
     </table>
 </body>
+
 </html>

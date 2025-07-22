@@ -1,113 +1,232 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Tatua Trial Expires Tomorrow - Don't Lose Your Data</title>
-    <link rel="shortcut icon" href="../assets/tatua-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="tatua-favicon.png" type="image/x-icon">
+    <!-- Linking Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <style type="text/css">
-
         /* Reset styles */
         body { 
-            margin: 0; 
-            padding: 0; 
-            font-family: Arial, Helvetica, sans-serif; 
+            font-family: 'Lexend Deca', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
         }
-        table { 
-            border-collapse: collapse; 
+
+        table {
+            border-collapse: collapse;
         }
-        img { 
-            border: 0; 
-            outline: none; 
-            text-decoration: none; 
+
+        img {
+            border: 0;
+            outline: none;
+            text-decoration: none;
         }
-        a { 
-            color: #2563EB; 
-            text-decoration: none; 
+
+        a {
+            color: #ff8c42;
+            text-decoration: none;
         }
 
         /* Main container */
-        .container { 
-            width: 100%; 
-            max-width: 600px; 
-            margin: 0 auto; 
-            background: #FFFFFF; 
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
         }
-        .header { 
-            background: #F3F4F6; 
-            padding: 20px; 
-            text-align: center; 
+
+        .header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 2px solid #ff8c42;
         }
-        .content { 
-            padding: 20px; 
+
+        .content {
+            padding: 40px 30px;
+            background: #1a1a1a;
         }
-        .footer { 
-            background: #F3F4F6; 
-            padding: 20px; 
-            font-size: 12px; 
-            color: #111827; 
-            text-align: center; 
+
+        .footer {
+            background: #0f0f0f;
+            padding: 30px;
+            font-size: 12px;
+            color: #cccccc;
+            text-align: center;
+            border-top: 1px solid #2a2a2a;
         }
 
         /* Typography */
-        .headline { 
-            font-size: 24px; 
-            color: #111827; 
-            font-weight: bold; 
+        .headline {
+            font-size: 28px;
+            color: #ff8c42;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 8px rgba(255, 140, 66, 0.3);
         }
-        .subheading { 
-            font-size: 18px; 
-            color: #111827; 
-            font-weight: bold; 
+
+        .subheading {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #ff8c42;
+            padding-left: 15px;
         }
-        .body-text { 
-            font-size: 14px; 
-            color: #111827; 
-            line-height: 1.5; 
+
+        .body-text {
+            font-size: 16px;
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
-        .footer-text { 
-            font-size: 12px; 
-            color: #111827; 
+
+        .footer-text {
+            font-size: 13px;
+            color: #cccccc;
+            opacity: 0.8;
         }
-        
-        /* Buttons */
-        .button { 
-            display: inline-block; 
-            padding: 12px 24px; 
-            background: #2563EB; 
-            color: #FFFFFF !important; 
-            text-decoration: none; 
-            font-size: 14px; 
-            border-radius: 4px; 
-            min-height: 44px; 
-            line-height: 44px; 
-            text-align: center; 
+
+        .urgency-text {
+            color: #cccccc;
+            font-size: 18px;
+            margin: 15px 0 0 0;
+            opacity: 0.9;
         }
-        .secondary-button { 
-            background: #FFFFFF; 
-            border: 1px solid #2563EB; 
-            color: #2563EB !important; 
+
+        /* Enhanced Buttons */
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff8c42 0%, #ff6b1a 100%);
+            color: #ffffff !important;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            min-height: 50px;
+            line-height: 50px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid #ff8c42;
         }
-        
+
+        .secondary-button {
+            background: linear-gradient(135deg, #333333 0%, #444444 100%);
+            box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+            border: 1px solid #555555;
+        }
+
+        /* Stats section */
+        .stats-section {
+            background: #242424;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #ff8c42;
+            border: 1px solid #2a2a2a;
+        }
+
+        /* Warning section */
+        .warning-section {
+            background: #2a1f1f;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #ff6b42;
+            border: 1px solid #3a2a2a;
+        }
+
+        /* Offer section */
+        .offer-section {
+            background: #2a2419;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 2px dashed #ff8c42;
+            text-align: center;
+        }
+
+        /* Enhanced Lists */
+        .feature-list {
+            background: #1f1f1f;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+            color: #cccccc;
+        }
+
+        .feature-list strong {
+            color: #ffffff;
+        }
+
         /* Links */
-        .footer-link { color: #2563EB; margin: 0 5px; }
-        
+        .footer-link {
+            color: #ff8c42 !important;
+            margin: 0 8px;
+            opacity: 0.9;
+            text-decoration: underline;
+        }
+
         /* Responsive design */
         @media only screen and (max-width: 480px) {
-            .container { width: 100% !important; }
-            .content { padding: 10px !important; }
-            .button { display: block; width: 100%; box-sizing: border-box; }
-            .button-table { width: 100% !important; }
+            .container {
+                width: 95% !important;
+                margin: 10px auto !important;
+            }
+
+            .content {
+                padding: 20px !important;
+            }
+
+            .header {
+                padding: 25px 15px !important;
+            }
+
+            .button {
+                display: block;
+                width: 90%;
+                box-sizing: border-box;
+                margin: 10px auto;
+            }
+
+            .headline {
+                font-size: 24px !important;
+            }
+
+            .subheading {
+                font-size: 18px !important;
+            }
         }
     </style>
 </head>
+
 <body>
     <table class="container" align="center" cellpadding="0" cellspacing="0">
         <!-- Header -->
         <tr>
             <td class="header">
-                <img src="../assets/tatua-logo.png" alt="Tatua Logo" width="200" style="display: block;" />
-                <p style="font-size: 14px; color: #111827; margin: 10px 0 0;">Continue your support transformation with a paid plan</p>
+                <img src="https://raw.githubusercontent.com/CamreshJames/fe-email-client/refs/heads/main/src/main/resources/email-marketing/tatua-logo.png" alt="Tatua Logo" width="200"
+                    style="display: block; margin: 0 auto;" />
+                <p class="urgency-text">Continue your support transformation with a paid plan</p>
             </td>
         </tr>
         <!-- Content -->
@@ -115,44 +234,54 @@
             <td class="content">
                 <h1 class="headline">Your Trial is Almost Over</h1>
                 <p class="body-text">Hi [First Name],</p>
-                <p class="body-text">Your 14-day Tatua trial expires tomorrow at 11:59 PM PST. We hope you've experienced the power of streamlined support operations!</p>
-                
-                <h2 class="subheading">Your Trial by Numbers</h2>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li><strong>Tickets Processed:</strong> [Number] tickets</li>
-                    <li><strong>Average Response Time:</strong> [Time] (Industry avg: 6.5 hours)</li>
-                    <li><strong>Customer Satisfaction:</strong> [Rating]/5 stars</li>
-                    <li><strong>Time Saved:</strong> Approximately [Hours] hours</li>
-                </ul>
-                
-                <h2 class="subheading">What Happens Next</h2>
-                <p class="body-text"><strong>If you don't upgrade:</strong></p>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li>Access to your dashboard will be suspended</li>
-                    <li>Ticket data will be preserved for 30 days</li>
-                    <li>You can reactivate anytime by choosing a plan</li>
-                </ul>
-                <p class="body-text"><strong>If you upgrade today:</strong></p>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li>Seamless continuation of service</li>
-                    <li>Keep all your data and configurations</li>
-                    <li>Access to additional features and integrations</li>
-                </ul>
-                
-                <h2 class="subheading">Recommended for You: Pro Plan - $99/month</h2>
-                <p class="body-text">Based on your trial usage, the Pro plan fits your needs perfectly.</p>
-                <p class="body-text"><strong>Pro Plan Includes:</strong></p>
-                <ul class="body-text" style="margin: 0; padding-left: 20px;">
-                    <li>10,000 tickets per month</li>
-                    <li>25 agent users</li>
-                    <li>All integrations</li>
-                    <li>Advanced reporting</li>
-                    <li>Email + chat support</li>
-                </ul>
-                
-                <h2 class="subheading">Special Offer</h2>
-                <p class="body-text"><strong>Upgrade today and save 20% on your first 3 months</strong><br />Use code: TRIAL20</p>
-                
+                <p class="body-text">Your 14-day Tatua trial expires tomorrow at 11:59 PM PST. We hope you've
+                    experienced the power of streamlined support operations!</p>
+
+                <div class="stats-section">
+                    <h2 class="subheading">Your Trial by Numbers</h2>
+                    <ul class="body-text" style="margin: 0; padding-left: 20px;">
+                        <li><strong>Tickets Processed:</strong> [Number] tickets</li>
+                        <li><strong>Average Response Time:</strong> [Time] (Industry avg: 6.5 hours)</li>
+                        <li><strong>Customer Satisfaction:</strong> [Rating]/5 stars</li>
+                        <li><strong>Time Saved:</strong> Approximately [Hours] hours</li>
+                    </ul>
+                </div>
+
+                <div class="warning-section">
+                    <h2 class="subheading">What Happens Next</h2>
+                    <p class="body-text"><strong>If you don't upgrade:</strong></p>
+                    <ul class="body-text" style="margin: 0; padding-left: 20px;">
+                        <li>Access to your dashboard will be suspended</li>
+                        <li>Ticket data will be preserved for 30 days</li>
+                        <li>You can reactivate anytime by choosing a plan</li>
+                    </ul>
+                    <p class="body-text"><strong>If you upgrade today:</strong></p>
+                    <ul class="body-text" style="margin: 0; padding-left: 20px;">
+                        <li>Seamless continuation of service</li>
+                        <li>Keep all your data and configurations</li>
+                        <li>Access to additional features and integrations</li>
+                    </ul>
+                </div>
+
+                <div class="feature-list">
+                    <h2 class="subheading">Recommended for You: Pro Plan - $99/month</h2>
+                    <p class="body-text">Based on your trial usage, the Pro plan fits your needs perfectly.</p>
+                    <p class="body-text"><strong>Pro Plan Includes:</strong></p>
+                    <ul class="body-text" style="margin: 0; padding-left: 20px;">
+                        <li>10,000 tickets per month</li>
+                        <li>25 agent users</li>
+                        <li>All integrations</li>
+                        <li>Advanced reporting</li>
+                        <li>Email + chat support</li>
+                    </ul>
+                </div>
+
+                <div class="offer-section">
+                    <h2 class="subheading">Special Offer</h2>
+                    <p class="body-text"><strong>Upgrade today and save 20% on your first 3 months</strong><br />Use
+                        code: <strong>TRIAL20</strong></p>
+                </div>
+
                 <!-- Buttons -->
                 <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 20px;">
                     <tr>
@@ -160,7 +289,7 @@
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Choose Your Plan</a>
+                                        <a href="https://app.tatua.com/pricing" style="color: #FFFFFF; text-decoration: none; display: block;" target="_blank">Choose Your Plan</a>
                                     </td>
                                 </tr>
                             </table>
@@ -171,21 +300,21 @@
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button secondary-button">
-                                        <a href="#" style="color: #2563EB;">Contact Sales Team</a>
+                                        <a href="https://calendly.com/tatua/sales" style="color: #FFFFFF; text-decoration: none; display: block;" target="_blank">Contact Sales Team</a>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                 </table>
-                
+
                 <h2 class="subheading">Have questions? Our team is ready to help:</h2>
                 <ul class="body-text" style="margin: 0; padding-left: 20px;">
                     <li><strong>Chat:</strong> Available in your dashboard</li>
                     <li><strong>Email:</strong> <a href="mailto:sales@tatua.com">sales@tatua.com</a></li>
                     <li><strong>Phone:</strong> <a href="tel:+15551234568">+1 (555) 123-4568</a></li>
                 </ul>
-                
+
                 <p class="body-text">Thank you for trying Tatua. We're excited to continue supporting your success!</p>
                 <p class="body-text">Best regards,<br />The Tatua Sales Team</p>
             </td>
@@ -193,19 +322,21 @@
         <!-- Footer -->
         <tr>
             <td class="footer">
-                <p class="footer-text">Tatua Solutions Inc.<br />sales@tatua.com | <a href="tel:+15551234568">+1 (555) 123-4568</a></p>
+                <p class="footer-text">Tatua Solutions Inc.<br />sales@tatua.com | <a href="tel:+15551234568">+1 (555)
+                        123-4568</a></p>
                 <p class="footer-text">
-                    <a href="#" class="footer-link">LinkedIn</a> | 
-                    <a href="#" class="footer-link">Twitter</a> | 
-                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="https://linkedin.com/company/tatua" class="footer-link" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/tatua" class="footer-link" target="_blank">Twitter</a> |
+                    <a href="https://facebook.com/tatua" class="footer-link" target="_blank">Facebook</a>
                 </p>
                 <p class="footer-text">
-                    <a href="#" class="footer-link">Privacy Policy</a> | 
-                    <a href="#" class="footer-link">Terms of Service</a> | 
-                    <a href="#" class="footer-link">Unsubscribe</a>
+                    <a href="https://tatua.com/privacy" class="footer-link" target="_blank">Privacy Policy</a> |
+                    <a href="https://tatua.com/terms" class="footer-link" target="_blank">Terms of Service</a> |
+                    <a href="https://tatua.com/unsubscribe?email={{email}}" class="footer-link" target="_blank">Unsubscribe</a>
                 </p>
             </td>
         </tr>
     </table>
 </body>
+
 </html>

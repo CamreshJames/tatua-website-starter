@@ -1,0 +1,145 @@
+{# <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Kenya</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; line-height: 1.6; }
+    header, footer, main, article, section, aside, figure { margin-bottom: 2rem; }
+    mark { background-color: yellow; }
+    summary { cursor: pointer; font-weight: bold; }
+    figure img { max-width: 100%; height: auto; border-radius: 8px; }
+    address { font-style: italic; color: #555; }
+    code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header with main title -->
+  <header>
+    <h1>Welcome to <abbr title="Republic of Kenya">Kenya</abbr></h1>
+    <p><mark>Explore</mark> the beauty, culture, and innovation of our great nation.</p>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+    <!-- Article: self-contained content -->
+    <article>
+      <h2>Why Visit Kenya?</h2>
+      <p>Kenya offers breathtaking landscapes, diverse wildlife, and warm hospitality.</p>
+
+      <!-- Figure with image and caption -->
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Mount_Kenya.jpg" alt="Mount Kenya">
+        <figcaption>Mount Kenya – the second highest mountain in Africa</figcaption>
+      </figure>
+
+      <!-- Time tag for when this article was published -->
+      <p>Published on: <time datetime="2025-07-16">July 16, 2025</time></p>
+    </article>
+
+    <!-- Section: group of content -->
+    <section>
+      <h2>Getting Started</h2>
+      <p>Learn basic Swahili greetings like <mark>“Jambo”</mark> and <mark>“Karibu”</mark>.</p>
+      <p>Try running this code to display a welcome message:</p>
+      <pre><code>console.log("Karibu Kenya!");</code></pre>
+    </section>
+
+    <!-- Aside: related but not central content -->
+    <aside>
+      <h3>Fun Fact</h3>
+      <p>The word <em>“safari”</em> is from Swahili, meaning “journey”.</p>
+    </aside>
+
+    <!-- Details: collapsible content -->
+    <details>
+      <summary>Tourist Visa Info</summary>
+      <p>You can apply for an e-visa online. Make sure your passport is valid for at least 6 months.</p>
+    </details>
+  </main>
+
+  <!-- Footer with address -->
+  <footer>
+    <address>
+      Ministry of Tourism, Nairobi, Kenya<br>
+      Website: <a href="https://magicalkenya.com">magicalkenya.com</a><br>
+      Contact: <a href="mailto:info@magicalkenya.com">info@magicalkenya.com</a>
+    </address>
+
+    <p>
+      Written by <cite>Camresh</cite>. Press <kbd>Ctrl</kbd> + <kbd>P</kbd> to print this page.
+    </p>
+
+    <p>
+      System output sample: <samp>Success: Welcome to Kenya loaded.</samp>
+    </p>
+
+    <p>
+      Change the variable <var>country</var> to "Kenya" in your config.
+    </p>
+  </footer>
+
+</body>
+</html> #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid Layout Demo</title>
+  <style>
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px; /* 3 columns: fixed, flexible, fixed */
+      grid-template-rows: auto 1fr auto;      /* 3 rows: header, main, footer */
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    /* Grid items */
+    .header {
+      grid-column: 1 / 4; /* spans all 3 columns */
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .sidebar-left {
+      background: #eee;
+      padding: 10px;
+    }
+
+    .main {
+      background: #fafafa;
+      padding: 10px;
+    }
+
+    .sidebar-right {
+      background: #eee;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-column: 1 / 4; /* spans all 3 columns */
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <header class="header">Header</header>
+    <nav class="sidebar-left">Left Sidebar</nav>
+    <main class="main">Main Content</main>
+    <aside class="sidebar-right">Right Sidebar</aside>
+    <footer class="footer">Footer</footer>
+  </div>
+
+</body>
+</html>
