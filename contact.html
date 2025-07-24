@@ -17,13 +17,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Theme Controls -->
+    <div class="theme-controls">
+        <button class="theme-switcher" id="theme-switcher" title="Switch Theme">🎨</button>
+        <div class="font-control">
+            <div class="font-size-display">
+                <span class="font-size-large">A</span>
+                <span class="font-size-small">a</span>
+            </div>
+            <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1" title="Font Size">
+        </div>
+    </div>
+
     <!-- Header section for logo and branding, consistent with other pages -->
     <header class="header">
         <div class="logo-container">
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
         </div>
-        <nav>
+        
+        <!-- Hamburger menu button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        
+        <nav class="nav" id="nav">
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -39,28 +59,28 @@
         <a href="index.html">Home</a> > <span>Contact</span>
     </nav>
 
-    <!-- Circular Dial Navigation -->
+    <!-- Infinity Scroll Navigation -->
     <nav class="dial-nav" id="dial-nav">
         <div class="dial-center">
             <div class="dial-indicator"></div>
         </div>
-        <div class="dial-item" data-target="#header-section" style="--angle: 0deg;">
+        <div class="dial-item" data-target="#header-section">
             <div class="dial-dot"></div>
             <span class="dial-label">Touch</span>
         </div>
-        <div class="dial-item" data-target="#contact-info" style="--angle: 72deg;">
+        <div class="dial-item" data-target="#contact-info">
             <div class="dial-dot"></div>
             <span class="dial-label">Info</span>
         </div>
-        <div class="dial-item" data-target="#contact-form" style="--angle: 144deg;">
+        <div class="dial-item" data-target="#contact-form">
             <div class="dial-dot"></div>
             <span class="dial-label">Form</span>
         </div>
-        <div class="dial-item" data-target="#offices" style="--angle: 216deg;">
+        <div class="dial-item" data-target="#offices">
             <div class="dial-dot"></div>
             <span class="dial-label">Offices</span>
         </div>
-        <div class="dial-item" data-target="#quick-actions" style="--angle: 288deg;">
+        <div class="dial-item" data-target="#quick-actions">
             <div class="dial-dot"></div>
             <span class="dial-label">Actions</span>
         </div>
@@ -122,91 +142,95 @@
             <!-- Personal Information fieldset -->
             <fieldset class="form-fieldset">
                 <legend class="form-legend">Contact Information</legend>
-                <!-- Full Name input -->
-                <div class="form-group">
-                    <label for="full-name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50" placeholder="Enter your full name">
-                </div>
-                <!-- Email Address input -->
-                <div class="form-group">
-                    <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="you@company.com">
-                </div>
-                <!-- Company Name input -->
-                <div class="form-group">
-                    <label for="company-name">Company Name <span class="required">*</span></label>
-                    <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100" placeholder="Your company name">
-                </div>
-                <!-- Phone Number input -->
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                <div class="form-grid form-grid-2">
+                    <!-- Full Name input -->
+                    <div class="form-group">
+                        <label for="full-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50" placeholder="Enter your full name">
+                    </div>
+                    <!-- Email Address input -->
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="you@company.com">
+                    </div>
+                    <!-- Company Name input -->
+                    <div class="form-group">
+                        <label for="company-name">Company Name <span class="required">*</span></label>
+                        <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100" placeholder="Your company name">
+                    </div>
+                    <!-- Phone Number input -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
                 </div>
             </fieldset>
 
             <!-- Inquiry Details fieldset -->
             <fieldset class="form-fieldset">
                 <legend class="form-legend">Tell us about your needs</legend>
-                <!-- Inquiry Type select -->
-                <div class="form-group">
-                    <label for="inquiry-type">Inquiry Type <span class="required">*</span></label>
-                    <select id="inquiry-type" name="inquiry-type" required>
-                        <option value="">Please select...</option>
-                        <option value="sales">Sales Inquiry</option>
-                        <option value="support">Technical Support</option>
-                        <option value="partnership">Partnership Opportunity</option>
-                        <option value="general">General Question</option>
-                        <option value="demo">Demo Request</option>
-                    </select>
+                <div class="form-grid form-grid-3">
+                    <!-- Inquiry Type select -->
+                    <div class="form-group">
+                        <label for="inquiry-type">Inquiry Type <span class="required">*</span></label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">Please select...</option>
+                            <option value="sales">Sales Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="general">General Question</option>
+                            <option value="demo">Demo Request</option>
+                        </select>
+                    </div>
+                    <!-- Company Size select -->
+                    <div class="form-group">
+                        <label for="company-size">Company Size <span class="required">*</span></label>
+                        <select id="company-size" name="company-size" required>
+                            <option value="">Please select...</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-1000">201-1000 employees</option>
+                            <option value="1000+">1000+ employees</option>
+                        </select>
+                    </div>
+                    <!-- Current Ticketing System select -->
+                    <div class="form-group">
+                        <label for="ticketing-system">Current Ticketing System</label>
+                        <select id="ticketing-system" name="ticketing-system">
+                            <option value="none">None currently</option>
+                            <option value="zendesk">Zendesk</option>
+                            <option value="servicenow">ServiceNow</option>
+                            <option value="freshdesk">Freshdesk</option>
+                            <option value="jira">Jira Service Management</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <!-- Budget Range select -->
+                    <div class="form-group">
+                        <label for="budget-range">Budget Range</label>
+                        <select id="budget-range" name="budget-range">
+                            <option value="under-1000">Under $1,000/month</option>
+                            <option value="1000-5000">$1,000 - $5,000/month</option>
+                            <option value="5000-15000">$5,000 - $15,000/month</option>
+                            <option value="15000+">$15,000+/month</option>
+                            <option value="enterprise">Enterprise (custom pricing)</option>
+                        </select>
+                    </div>
+                    <!-- Implementation Timeline select -->
+                    <div class="form-group">
+                        <label for="timeline">Implementation Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="immediate">Immediate (within 1 month)</option>
+                            <option value="1-3">1-3 months</option>
+                            <option value="3-6">3-6 months</option>
+                            <option value="6+">6+ months</option>
+                            <option value="exploring">Just exploring options</option>
+                        </select>
+                    </div>
                 </div>
-                <!-- Company Size select -->
-                <div class="form-group">
-                    <label for="company-size">Company Size <span class="required">*</span></label>
-                    <select id="company-size" name="company-size" required>
-                        <option value="">Please select...</option>
-                        <option value="1-10">1-10 employees</option>
-                        <option value="11-50">11-50 employees</option>
-                        <option value="51-200">51-200 employees</option>
-                        <option value="201-1000">201-1000 employees</option>
-                        <option value="1000+">1000+ employees</option>
-                    </select>
-                </div>
-                <!-- Current Ticketing System select -->
-                <div class="form-group">
-                    <label for="ticketing-system">Current Ticketing System</label>
-                    <select id="ticketing-system" name="ticketing-system">
-                        <option value="none">None currently</option>
-                        <option value="zendesk">Zendesk</option>
-                        <option value="servicenow">ServiceNow</option>
-                        <option value="freshdesk">Freshdesk</option>
-                        <option value="jira">Jira Service Management</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <!-- Budget Range select -->
-                <div class="form-group">
-                    <label for="budget-range">Budget Range</label>
-                    <select id="budget-range" name="budget-range">
-                        <option value="under-1000">Under $1,000/month</option>
-                        <option value="1000-5000">$1,000 - $5,000/month</option>
-                        <option value="5000-15000">$5,000 - $15,000/month</option>
-                        <option value="15000+">$15,000+/month</option>
-                        <option value="enterprise">Enterprise (custom pricing)</option>
-                    </select>
-                </div>
-                <!-- Implementation Timeline select -->
-                <div class="form-group">
-                    <label for="timeline">Implementation Timeline</label>
-                    <select id="timeline" name="timeline">
-                        <option value="immediate">Immediate (within 1 month)</option>
-                        <option value="1-3">1-3 months</option>
-                        <option value="3-6">3-6 months</option>
-                        <option value="6+">6+ months</option>
-                        <option value="exploring">Just exploring options</option>
-                    </select>
-                </div>
-                <!-- Message textarea -->
-                <div class="form-group">
+                <!-- Message textarea - Full width -->
+                <div class="form-group form-group-full">
                     <label for="message">Message <span class="required">*</span></label>
                     <textarea id="message" name="message" required minlength="10" maxlength="500" rows="5" placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
                 </div>
@@ -215,39 +239,44 @@
             <!-- Preferences fieldset -->
             <fieldset class="form-fieldset">
                 <legend class="form-legend">Communication Preferences</legend>
-                <!-- Preferred Contact Method radio -->
-                <div class="form-group">
-                    <label>Preferred Contact Method <span class="required">*</span></label>
-                    <div class="radio-group">
-                        <input type="radio" id="contact-email" name="contact-method" value="email" required>
-                        <label for="contact-email">Email</label>
-                        <input type="radio" id="contact-phone" name="contact-method" value="phone">
-                        <label for="contact-phone">Phone</label>
-                        <input type="radio" id="contact-video" name="contact-method" value="video">
-                        <label for="contact-video">Video Call</label>
+                <div class="form-grid form-grid-2">
+                    <!-- Preferred Contact Method radio -->
+                    <div class="form-group">
+                        <label>Preferred Contact Method <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                            <label for="contact-email">Email</label>
+                            <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                            <label for="contact-phone">Phone</label>
+                            <input type="radio" id="contact-video" name="contact-method" value="video">
+                            <label for="contact-video">Video Call</label>
+                        </div>
+                    </div>
+                    <!-- Best Time to Contact radio -->
+                    <div class="form-group">
+                        <label>Best Time to Contact</label>
+                        <div class="radio-group">
+                            <input type="radio" id="time-morning" name="contact-time" value="morning">
+                            <label for="time-morning">Morning (9 AM - 12 PM PST)</label>
+                            <input type="radio" id="time-afternoon" name="contact-time" value="afternoon">
+                            <label for="time-afternoon">Afternoon (12 PM - 5 PM PST)</label>
+                            <input type="radio" id="time-evening" name="contact-time" value="evening">
+                            <label for="time-evening">Evening (5 PM - 8 PM PST)</label>
+                        </div>
                     </div>
                 </div>
-                <!-- Best Time to Contact radio -->
-                <div class="form-group">
-                    <label>Best Time to Contact</label>
-                    <div class="radio-group">
-                        <input type="radio" id="time-morning" name="contact-time" value="morning">
-                        <label for="time-morning">Morning (9 AM - 12 PM PST)</label>
-                        <input type="radio" id="time-afternoon" name="contact-time" value="afternoon">
-                        <label for="time-afternoon">Afternoon (12 PM - 5 PM PST)</label>
-                        <input type="radio" id="time-evening" name="contact-time" value="evening">
-                        <label for="time-evening">Evening (5 PM - 8 PM PST)</label>
+                <!-- Checkboxes - Full width -->
+                <div class="form-grid form-grid-2">
+                    <!-- Newsletter Subscription checkbox -->
+                    <div class="form-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Yes, I'd like to receive product updates and industry insights</label>
                     </div>
-                </div>
-                <!-- Newsletter Subscription checkbox -->
-                <div class="form-group">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">Yes, I'd like to receive product updates and industry insights</label>
-                </div>
-                <!-- Terms Agreement checkbox -->
-                <div class="form-group">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    <!-- Terms Agreement checkbox -->
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> <span class="required">*</span></label>
+                    </div>
                 </div>
             </fieldset>
 
@@ -325,6 +354,81 @@
     </footer>
 
     <script>
+        // Theme and Font Size Management
+        class ThemeManager {
+            constructor() {
+                this.currentTheme = localStorage.getItem('theme') || 'purple';
+                this.currentFontScale = parseFloat(localStorage.getItem('fontScale')) || 1;
+                this.init();
+            }
+            
+            init() {
+                // Apply saved theme and font scale
+                document.documentElement.setAttribute('data-theme', this.currentTheme);
+                document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
+                
+                // Set up event listeners
+                const themeButton = document.getElementById('theme-switcher');
+                const fontSlider = document.getElementById('font-slider');
+                
+                if (themeButton) {
+                    themeButton.addEventListener('click', () => this.toggleTheme());
+                }
+                
+                if (fontSlider) {
+                    fontSlider.value = this.currentFontScale;
+                    fontSlider.addEventListener('input', (e) => this.updateFontSize(e.target.value));
+                }
+            }
+            
+            toggleTheme() {
+                this.currentTheme = this.currentTheme === 'purple' ? 'brown' : 'purple';
+                document.documentElement.setAttribute('data-theme', this.currentTheme);
+                localStorage.setItem('theme', this.currentTheme);
+                
+                // Update button emoji
+                const themeButton = document.getElementById('theme-switcher');
+                themeButton.textContent = this.currentTheme === 'purple' ? '🟤' : '🟣';
+            }
+            
+            updateFontSize(scale) {
+                this.currentFontScale = parseFloat(scale);
+                document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
+                localStorage.setItem('fontScale', this.currentFontScale);
+            }
+        }
+        
+        // Initialize theme manager
+        const themeManager = new ThemeManager();
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.classList.toggle('nav-open');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            }
+        });
+        
         // Dial navigation functionality
         const dialItems = document.querySelectorAll('.dial-item');
         const dialCenter = document.querySelector('.dial-center');
@@ -356,33 +460,53 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
-        // Highlight active section in dial navigation
+        // Infinity scroll navigation logic
         const sections = document.querySelectorAll('section[id]');
         
-        window.addEventListener('scroll', () => {
+        function updateInfinityNavigation() {
             let current = '';
-            sections.forEach(section => {
+            let currentIndex = -1;
+            
+            // Find current section
+            sections.forEach((section, index) => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
+                    currentIndex = index;
                 }
             });
             
-            dialItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-target') === '#' + current) {
+            // Update dial items with infinity scroll effect
+            dialItems.forEach((item, index) => {
+                const targetId = item.getAttribute('data-target').substring(1);
+                const sectionIndex = Array.from(sections).findIndex(s => s.id === targetId);
+                
+                item.classList.remove('active', 'above', 'below', 'hidden');
+                
+                if (sectionIndex === currentIndex) {
                     item.classList.add('active');
+                } else if (sectionIndex === currentIndex - 1) {
+                    item.classList.add('above');
+                } else if (sectionIndex === currentIndex + 1) {
+                    item.classList.add('below');
+                } else {
+                    item.classList.add('hidden');
                 }
             });
-        });
+            
+            // Update indicator position
+            const activeItem = document.querySelector('.dial-item.active');
+            if (activeItem) {
+                const indicator = document.querySelector('.dial-indicator');
+                const progress = (currentIndex / (sections.length - 1)) * 100;
+                indicator.style.top = `${Math.max(10, Math.min(90, progress))}%`;
+            }
+        }
         
-        // Dial rotation effect based on scroll
-        window.addEventListener('scroll', () => {
-            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
-            const rotation = scrollPercent * 360;
-            dialCenter.style.transform = `rotate(${rotation}deg)`;
-        });
+        window.addEventListener('scroll', updateInfinityNavigation);
+        
+        // Initialize on load
+        updateInfinityNavigation();
     </script>
 </body>
 </html>

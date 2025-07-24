@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Setting character encoding to UTF-8 for universal compatibility -->
     <meta charset="UTF-8">
     <!-- Ensuring responsive design for various devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta description for SEO, as provided -->
-    <meta name="description" content="Streamline your support operations with Tatua's enterprise-grade ticketing system. Join 500+ companies delivering exceptional customer experiences.">
+    <meta name="description"
+        content="Streamline your support operations with Tatua's enterprise-grade ticketing system. Join 500+ companies delivering exceptional customer experiences.">
     <!-- Page title, as provided -->
     <title>Tatua - Enterprise Ticketing Solutions</title>
     <!-- Linking favicon for browser tab icon -->
@@ -14,14 +16,36 @@
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
+    <!-- Theme Controls -->
+    <div class="theme-controls">
+        <button class="theme-switcher" id="theme-switcher" title="Switch Theme">🎨</button>
+        <div class="font-control">
+            <div class="font-size-display">
+                <span class="font-size-large">A</span>
+                <span class="font-size-small">a</span>
+            </div>
+            <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1"
+                title="Font Size">
+        </div>
+    </div>
+
     <!-- Header section for logo and branding -->
     <header class="header">
         <div class="logo-container">
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
         </div>
-        <nav>
+
+        <!-- Hamburger menu button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <nav class="nav" id="nav">
             <ul class="navbar">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -29,22 +53,22 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header></a>
 
-    <!-- Circular Dial Navigation -->
+    <!-- Infinity Scroll Navigation -->
     <nav class="dial-nav" id="dial-nav">
         <div class="dial-center">
             <div class="dial-indicator"></div>
         </div>
-        <div class="dial-item" data-target="#hero" style="--angle: 0deg;">
+        <div class="dial-item" data-target="#hero">
             <div class="dial-dot"></div>
             <span class="dial-label">Hero</span>
         </div>
-        <div class="dial-item" data-target="#services" style="--angle: 120deg;">
+        <div class="dial-item" data-target="#services">
             <div class="dial-dot"></div>
             <span class="dial-label">Services</span>
         </div>
-        <div class="dial-item" data-target="#stats" style="--angle: 240deg;">
+        <div class="dial-item" data-target="#stats">
             <div class="dial-dot"></div>
             <span class="dial-label">Stats</span>
         </div>
@@ -57,7 +81,8 @@
         <!-- Tagline to reinforce the product's value -->
         <p class="hero-tagline">Enterprise-grade ticketing system that scales with your business</p>
         <!-- Description to provide more context -->
-        <p class="hero-description">Join 500+ companies using Tatua to manage customer support, track issues, and deliver exceptional service experiences.</p>
+        <p class="hero-description">Join 500+ companies using Tatua to manage customer support, track issues, and
+            deliver exceptional service experiences.</p>
         <!-- Container for call-to-action buttons -->
         <div class="hero-cta">
             <!-- Primary CTA button, typically more prominent -->
@@ -131,10 +156,85 @@
     </footer>
 
     <script>
+        // Theme and Font Size Management
+        class ThemeManager {
+            constructor() {
+                this.currentTheme = localStorage.getItem('theme') || 'purple';
+                this.currentFontScale = parseFloat(localStorage.getItem('fontScale')) || 1;
+                this.init();
+            }
+
+            init() {
+                // Apply saved theme and font scale
+                document.documentElement.setAttribute('data-theme', this.currentTheme);
+                document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
+
+                // Set up event listeners
+                const themeButton = document.getElementById('theme-switcher');
+                const fontSlider = document.getElementById('font-slider');
+
+                if (themeButton) {
+                    themeButton.addEventListener('click', () => this.toggleTheme());
+                }
+
+                if (fontSlider) {
+                    fontSlider.value = this.currentFontScale;
+                    fontSlider.addEventListener('input', (e) => this.updateFontSize(e.target.value));
+                }
+            }
+
+            toggleTheme() {
+                this.currentTheme = this.currentTheme === 'purple' ? 'brown' : 'purple';
+                document.documentElement.setAttribute('data-theme', this.currentTheme);
+                localStorage.setItem('theme', this.currentTheme);
+
+                // Update button emoji
+                const themeButton = document.getElementById('theme-switcher');
+                themeButton.textContent = this.currentTheme === 'purple' ? '🟤' : '🟣';
+            }
+
+            updateFontSize(scale) {
+                this.currentFontScale = parseFloat(scale);
+                document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
+                localStorage.setItem('fontScale', this.currentFontScale);
+            }
+        }
+
+        // Initialize theme manager
+        const themeManager = new ThemeManager();
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.classList.toggle('nav-open');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            }
+        });
+
         // Dial navigation functionality
         const dialItems = document.querySelectorAll('.dial-item');
         const dialCenter = document.querySelector('.dial-center');
-        
+
         // Smooth scrolling for dial navigation
         dialItems.forEach(item => {
             item.addEventListener('click', (e) => {
@@ -146,10 +246,10 @@
                 }
             });
         });
-        
+
         // Back to top functionality
         const backToTopBtn = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.add('show');
@@ -157,38 +257,59 @@
                 backToTopBtn.classList.remove('show');
             }
         });
-        
+
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
-        // Highlight active section in dial navigation
+
+        // Infinity scroll navigation logic
         const sections = document.querySelectorAll('section[id]');
-        
-        window.addEventListener('scroll', () => {
+
+        function updateInfinityNavigation() {
             let current = '';
-            sections.forEach(section => {
+            let currentIndex = -1;
+
+            // Find current section
+            sections.forEach((section, index) => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.pageYOffset >= sectionTop - 200) {
                     current = section.getAttribute('id');
+                    currentIndex = index;
                 }
             });
-            
-            dialItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('data-target') === '#' + current) {
+
+            // Update dial items with infinity scroll effect
+            dialItems.forEach((item, index) => {
+                const targetId = item.getAttribute('data-target').substring(1);
+                const sectionIndex = Array.from(sections).findIndex(s => s.id === targetId);
+
+                item.classList.remove('active', 'above', 'below', 'hidden');
+
+                if (sectionIndex === currentIndex) {
                     item.classList.add('active');
+                } else if (sectionIndex === currentIndex - 1) {
+                    item.classList.add('above');
+                } else if (sectionIndex === currentIndex + 1) {
+                    item.classList.add('below');
+                } else {
+                    item.classList.add('hidden');
                 }
             });
-        });
-        
-        // Dial rotation effect based on scroll
-        window.addEventListener('scroll', () => {
-            const scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
-            const rotation = scrollPercent * 360;
-            dialCenter.style.transform = `rotate(${rotation}deg)`;
-        });
+
+            // Update indicator position
+            const activeItem = document.querySelector('.dial-item.active');
+            if (activeItem) {
+                const indicator = document.querySelector('.dial-indicator');
+                const progress = (currentIndex / (sections.length - 1)) * 100;
+                indicator.style.top = `${Math.max(10, Math.min(90, progress))}%`;
+            }
+        }
+
+        window.addEventListener('scroll', updateInfinityNavigation);
+
+        // Initialize on load
+        updateInfinityNavigation();
     </script>
 </body>
+
 </html>
