@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Setting character encoding to UTF-8 for universal compatibility -->
     <meta charset="UTF-8">
     <!-- Ensuring responsive design for various devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta description for SEO, as provided -->
-    <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations.">
+    <meta name="description"
+        content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations.">
     <!-- Page title, as provided -->
     <title>Contact Us - Tatua Solutions</title>
     <!-- Linking favicon for browser tab icon -->
@@ -16,16 +18,22 @@
     <!-- Linking Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Theme Controls -->
     <div class="theme-controls">
         <button class="theme-switcher" id="theme-switcher" title="Switch Theme">🎨</button>
-        <div class="font-control">
-            <div class="font-size-display">
-                <span class="font-size-large">A</span>
-                <span class="font-size-small">a</span>
+        <div class="font-control" id="font-control">
+            <div class="font-control-icon">Aa</div>
+            <div class="font-control-content">
+                <div class="font-size-display">
+                    <span class="font-size-large">A</span>
+                    <span class="font-size-small">a</span>
+                </div>
+                <div class="font-size-value" id="font-size-value">16px</div>
+                <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1"
+                    title="Font Size">
             </div>
-            <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1" title="Font Size">
         </div>
     </div>
 
@@ -35,14 +43,14 @@
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
         </div>
-        
+
         <!-- Hamburger menu button -->
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
-        
+
         <nav class="nav" id="nav">
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -93,7 +101,9 @@
         <!-- Subheading to reinforce the call to action -->
         <h2 class="header-subheading">Ready to transform your support operations?</h2>
         <!-- Description to provide context -->
-        <p class="header-description">Our team is here to help you find the perfect solution for your business needs. Whether you're looking to start a trial, need technical support, or want to explore partnership opportunities, we're ready to help.</p>
+        <p class="header-description">Our team is here to help you find the perfect solution for your business needs.
+            Whether you're looking to start a trial, need technical support, or want to explore partnership
+            opportunities, we're ready to help.</p>
     </section>
 
     <!-- Contact Information section for company details and contact methods -->
@@ -146,7 +156,8 @@
                     <!-- Full Name input -->
                     <div class="form-group">
                         <label for="full-name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50" placeholder="Enter your full name">
+                        <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50"
+                            placeholder="Enter your full name">
                     </div>
                     <!-- Email Address input -->
                     <div class="form-group">
@@ -156,12 +167,14 @@
                     <!-- Company Name input -->
                     <div class="form-group">
                         <label for="company-name">Company Name <span class="required">*</span></label>
-                        <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100" placeholder="Your company name">
+                        <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100"
+                            placeholder="Your company name">
                     </div>
                     <!-- Phone Number input -->
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="123-456-7890">
                     </div>
                 </div>
             </fieldset>
@@ -232,7 +245,8 @@
                 <!-- Message textarea - Full width -->
                 <div class="form-group form-group-full">
                     <label for="message">Message <span class="required">*</span></label>
-                    <textarea id="message" name="message" required minlength="10" maxlength="500" rows="5" placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
+                    <textarea id="message" name="message" required minlength="10" maxlength="500" rows="5"
+                        placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
                 </div>
             </fieldset>
 
@@ -275,7 +289,8 @@
                     <!-- Terms Agreement checkbox -->
                     <div class="form-group">
                         <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> <span class="required">*</span></label>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                Policy</a> <span class="required">*</span></label>
                     </div>
                 </div>
             </fieldset>
@@ -361,56 +376,186 @@
                 this.currentFontScale = parseFloat(localStorage.getItem('fontScale')) || 1;
                 this.init();
             }
-            
+
             init() {
                 // Apply saved theme and font scale
                 document.documentElement.setAttribute('data-theme', this.currentTheme);
                 document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
-                
+
                 // Set up event listeners
                 const themeButton = document.getElementById('theme-switcher');
                 const fontSlider = document.getElementById('font-slider');
-                
+
                 if (themeButton) {
                     themeButton.addEventListener('click', () => this.toggleTheme());
                 }
-                
+
                 if (fontSlider) {
                     fontSlider.value = this.currentFontScale;
                     fontSlider.addEventListener('input', (e) => this.updateFontSize(e.target.value));
                 }
             }
-            
+
             toggleTheme() {
                 this.currentTheme = this.currentTheme === 'purple' ? 'brown' : 'purple';
                 document.documentElement.setAttribute('data-theme', this.currentTheme);
                 localStorage.setItem('theme', this.currentTheme);
-                
+
                 // Update button emoji
                 const themeButton = document.getElementById('theme-switcher');
                 themeButton.textContent = this.currentTheme === 'purple' ? '🟤' : '🟣';
             }
-            
+
             updateFontSize(scale) {
                 this.currentFontScale = parseFloat(scale);
                 document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
                 localStorage.setItem('fontScale', this.currentFontScale);
+
+                // Update font size display
+                const fontSizeValue = document.getElementById('font-size-value');
+                if (fontSizeValue) {
+                    const baseFontSize = 16;
+                    const currentSize = Math.round(baseFontSize * this.currentFontScale);
+                    fontSizeValue.textContent = `${currentSize}px`;
+                }
             }
         }
-        
+
         // Initialize theme manager
         const themeManager = new ThemeManager();
+
+        // Font control expand/collapse functionality
+        const fontControl = document.getElementById('font-control');
+        let fontControlTimeout;
+
+        fontControl.addEventListener('click', () => {
+            fontControl.classList.toggle('expanded');
+            clearTimeout(fontControlTimeout);
+
+            if (fontControl.classList.contains('expanded')) {
+                fontControlTimeout = setTimeout(() => {
+                    fontControl.classList.remove('expanded');
+                }, 5000);
+            }
+        });
+
+        fontControl.addEventListener('mouseleave', () => {
+            if (!fontControl.classList.contains('expanded')) {
+                clearTimeout(fontControlTimeout);
+            }
+        });
+
+        // Draggable dial indicator for scrolling
+        class DraggableDialIndicator {
+            constructor() {
+                this.dialIndicator = document.querySelector('.dial-indicator');
+                this.dialCenter = document.querySelector('.dial-center');
+                this.sections = document.querySelectorAll('section[id]');
+                this.isDragging = false;
+                this.startY = 0;
+                this.startTop = 0;
+                this.init();
+            }
+
+            init() {
+                if (!this.dialIndicator || !this.dialCenter) return;
+
+                this.dialIndicator.addEventListener('mousedown', this.handleMouseDown.bind(this));
+                document.addEventListener('mousemove', this.handleMouseMove.bind(this));
+                document.addEventListener('mouseup', this.handleMouseUp.bind(this));
+
+                // Touch events for mobile
+                this.dialIndicator.addEventListener('touchstart', this.handleTouchStart.bind(this));
+                document.addEventListener('touchmove', this.handleTouchMove.bind(this));
+                document.addEventListener('touchend', this.handleTouchEnd.bind(this));
+            }
+
+            handleMouseDown(e) {
+                this.startDrag(e.clientY);
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            handleTouchStart(e) {
+                this.startDrag(e.touches[0].clientY);
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            startDrag(clientY) {
+                this.isDragging = true;
+                this.startY = clientY;
+                const indicatorRect = this.dialIndicator.getBoundingClientRect();
+                this.startTop = indicatorRect.top + window.scrollY;
+                this.dialIndicator.classList.add('dragging');
+            }
+
+            handleMouseMove(e) {
+                if (!this.isDragging) return;
+                this.updatePosition(e.clientY);
+            }
+
+            handleTouchMove(e) {
+                if (!this.isDragging) return;
+                this.updatePosition(e.touches[0].clientY);
+                e.preventDefault();
+            }
+
+            updatePosition(clientY) {
+                const deltaY = clientY - this.startY;
+                const centerRect = this.dialCenter.getBoundingClientRect();
+
+                // Calculate new position relative to the center bar
+                const centerTop = centerRect.top;
+                const centerHeight = centerRect.height;
+                const newIndicatorY = this.startTop + deltaY - centerTop;
+
+                // Constrain to center bar bounds
+                const constrainedY = Math.max(0, Math.min(centerHeight, newIndicatorY));
+                const percentage = constrainedY / centerHeight;
+
+                // Update indicator position
+                this.dialIndicator.style.top = `${percentage * 100}%`;
+
+                // Calculate corresponding scroll position
+                const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const targetScrollY = percentage * documentHeight;
+
+                // Scroll to the calculated position
+                window.scrollTo({
+                    top: targetScrollY,
+                    behavior: 'auto' // Use auto for smooth dragging
+                });
+            }
+
+            handleMouseUp() {
+                this.endDrag();
+            }
+
+            handleTouchEnd() {
+                this.endDrag();
+            }
+
+            endDrag() {
+                if (!this.isDragging) return;
+                this.isDragging = false;
+                this.dialIndicator.classList.remove('dragging');
+            }
+        }
+
+        // Initialize draggable dial indicator
+        const draggableDialIndicator = new DraggableDialIndicator();
 
         // Hamburger menu functionality
         const hamburger = document.getElementById('hamburger');
         const nav = document.getElementById('nav');
-        
+
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             nav.classList.toggle('active');
             document.body.classList.toggle('nav-open');
         });
-        
+
         // Close menu when clicking on a link
         document.querySelectorAll('.navbar a').forEach(link => {
             link.addEventListener('click', () => {
@@ -419,7 +564,7 @@
                 document.body.classList.remove('nav-open');
             });
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
@@ -428,11 +573,11 @@
                 document.body.classList.remove('nav-open');
             }
         });
-        
+
         // Dial navigation functionality
         const dialItems = document.querySelectorAll('.dial-item');
         const dialCenter = document.querySelector('.dial-center');
-        
+
         // Smooth scrolling for dial navigation
         dialItems.forEach(item => {
             item.addEventListener('click', (e) => {
@@ -444,10 +589,10 @@
                 }
             });
         });
-        
+
         // Back to top functionality
         const backToTopBtn = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.add('show');
@@ -455,18 +600,18 @@
                 backToTopBtn.classList.remove('show');
             }
         });
-        
+
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
+
         // Infinity scroll navigation logic
         const sections = document.querySelectorAll('section[id]');
-        
+
         function updateInfinityNavigation() {
             let current = '';
             let currentIndex = -1;
-            
+
             // Find current section
             sections.forEach((section, index) => {
                 const sectionTop = section.offsetTop;
@@ -475,14 +620,14 @@
                     currentIndex = index;
                 }
             });
-            
+
             // Update dial items with infinity scroll effect
             dialItems.forEach((item, index) => {
                 const targetId = item.getAttribute('data-target').substring(1);
                 const sectionIndex = Array.from(sections).findIndex(s => s.id === targetId);
-                
+
                 item.classList.remove('active', 'above', 'below', 'hidden');
-                
+
                 if (sectionIndex === currentIndex) {
                     item.classList.add('active');
                 } else if (sectionIndex === currentIndex - 1) {
@@ -493,7 +638,7 @@
                     item.classList.add('hidden');
                 }
             });
-            
+
             // Update indicator position
             const activeItem = document.querySelector('.dial-item.active');
             if (activeItem) {
@@ -502,11 +647,12 @@
                 indicator.style.top = `${Math.max(10, Math.min(90, progress))}%`;
             }
         }
-        
+
         window.addEventListener('scroll', updateInfinityNavigation);
-        
+
         // Initialize on load
         updateInfinityNavigation();
     </script>
 </body>
+
 </html>

@@ -21,13 +21,17 @@
     <!-- Theme Controls -->
     <div class="theme-controls">
         <button class="theme-switcher" id="theme-switcher" title="Switch Theme">🎨</button>
-        <div class="font-control">
-            <div class="font-size-display">
-                <span class="font-size-large">A</span>
-                <span class="font-size-small">a</span>
+        <div class="font-control" id="font-control">
+            <div class="font-control-icon">Aa</div>
+            <div class="font-control-content">
+                <div class="font-size-display">
+                    <span class="font-size-large">A</span>
+                    <span class="font-size-small">a</span>
+                </div>
+                <div class="font-size-value" id="font-size-value">16px</div>
+                <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1"
+                    title="Font Size">
             </div>
-            <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1"
-                title="Font Size">
         </div>
     </div>
 
@@ -197,11 +201,141 @@
                 this.currentFontScale = parseFloat(scale);
                 document.documentElement.style.setProperty('--font-scale', this.currentFontScale);
                 localStorage.setItem('fontScale', this.currentFontScale);
+                
+                // Update font size display
+                const fontSizeValue = document.getElementById('font-size-value');
+                if (fontSizeValue) {
+                    const baseFontSize = 16;
+                    const currentSize = Math.round(baseFontSize * this.currentFontScale);
+                    fontSizeValue.textContent = `${currentSize}px`;
+                }
             }
         }
 
         // Initialize theme manager
         const themeManager = new ThemeManager();
+
+        // Font control expand/collapse functionality
+        const fontControl = document.getElementById('font-control');
+        let fontControlTimeout;
+
+        fontControl.addEventListener('click', () => {
+            fontControl.classList.toggle('expanded');
+            clearTimeout(fontControlTimeout);
+            
+            if (fontControl.classList.contains('expanded')) {
+                fontControlTimeout = setTimeout(() => {
+                    fontControl.classList.remove('expanded');
+                }, 5000);
+            }
+        });
+
+        fontControl.addEventListener('mouseleave', () => {
+            if (!fontControl.classList.contains('expanded')) {
+                clearTimeout(fontControlTimeout);
+            }
+        });
+
+        // Draggable dial indicator for scrolling
+        class DraggableDialIndicator {
+            constructor() {
+                this.dialIndicator = document.querySelector('.dial-indicator');
+                this.dialCenter = document.querySelector('.dial-center');
+                this.sections = document.querySelectorAll('section[id]');
+                this.isDragging = false;
+                this.startY = 0;
+                this.startTop = 0;
+                this.init();
+            }
+
+            init() {
+                if (!this.dialIndicator || !this.dialCenter) return;
+
+                this.dialIndicator.addEventListener('mousedown', this.handleMouseDown.bind(this));
+                document.addEventListener('mousemove', this.handleMouseMove.bind(this));
+                document.addEventListener('mouseup', this.handleMouseUp.bind(this));
+                
+                // Touch events for mobile
+                this.dialIndicator.addEventListener('touchstart', this.handleTouchStart.bind(this));
+                document.addEventListener('touchmove', this.handleTouchMove.bind(this));
+                document.addEventListener('touchend', this.handleTouchEnd.bind(this));
+            }
+
+            handleMouseDown(e) {
+                this.startDrag(e.clientY);
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            handleTouchStart(e) {
+                this.startDrag(e.touches[0].clientY);
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            startDrag(clientY) {
+                this.isDragging = true;
+                this.startY = clientY;
+                const indicatorRect = this.dialIndicator.getBoundingClientRect();
+                this.startTop = indicatorRect.top + window.scrollY;
+                this.dialIndicator.classList.add('dragging');
+            }
+
+            handleMouseMove(e) {
+                if (!this.isDragging) return;
+                this.updatePosition(e.clientY);
+            }
+
+            handleTouchMove(e) {
+                if (!this.isDragging) return;
+                this.updatePosition(e.touches[0].clientY);
+                e.preventDefault();
+            }
+
+            updatePosition(clientY) {
+                const deltaY = clientY - this.startY;
+                const centerRect = this.dialCenter.getBoundingClientRect();
+                
+                // Calculate new position relative to the center bar
+                const centerTop = centerRect.top;
+                const centerHeight = centerRect.height;
+                const newIndicatorY = this.startTop + deltaY - centerTop;
+                
+                // Constrain to center bar bounds
+                const constrainedY = Math.max(0, Math.min(centerHeight, newIndicatorY));
+                const percentage = constrainedY / centerHeight;
+                
+                // Update indicator position
+                this.dialIndicator.style.top = `${percentage * 100}%`;
+                
+                // Calculate corresponding scroll position
+                const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const targetScrollY = percentage * documentHeight;
+                
+                // Scroll to the calculated position
+                window.scrollTo({
+                    top: targetScrollY,
+                    behavior: 'auto' // Use auto for smooth dragging
+                });
+            }
+
+            handleMouseUp() {
+                this.endDrag();
+            }
+
+            handleTouchEnd() {
+                this.endDrag();
+            }
+
+            endDrag() {
+                if (!this.isDragging) return;
+                this.isDragging = false;
+                this.dialIndicator.classList.remove('dragging');
+            }
+        }
+
+        // Initialize draggable dial indicator
+        const draggableDialIndicator = new DraggableDialIndicator();
 
         // Hamburger menu functionality
         const hamburger = document.getElementById('hamburger');
