@@ -57,6 +57,8 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
+
+                <li><a href="ticketing.html">Tatua Ticketing</a></li>
             </ul>
         </nav>
     </header>
@@ -108,199 +110,451 @@
 
     <!-- Contact Information section for company details and contact methods -->
     <section id="contact-info" class="contact-info section-fullheight">
-        <div class="contact-content">
-            <!-- Company details -->
-            <address class="contact-details">
-                <h2 class="contact-heading">Tatua Solutions Inc.</h2>
-                <p>123 Innovation Drive, Suite 400</p>
-                <p>San Francisco, CA 94105</p>
-            </address>
-            <!-- Phone numbers -->
-            <div class="contact-phone">
-                <h3 class="contact-subheading">Phone Numbers</h3>
-                <p>Main: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                <p>Sales: <a href="tel:+15551234568">+1 (555) 123-4568</a></p>
-                <p>Support: <a href="tel:+15551234569">+1 (555) 123-4569</a></p>
+        <div class="contact-info-container">
+            <!-- Section Header -->
+            <div class="contact-info-header">
+                <h2 class="contact-info-title">Multiple Ways to Connect</h2>
+                <p class="contact-info-subtitle">Choose the method that works best for you - we're here to help</p>
             </div>
-            <!-- Email addresses -->
-            <div class="contact-email">
-                <h3 class="contact-subheading">Email Addresses</h3>
-                <p>General Inquiries: <a href="mailto:hello@tatua.com">hello@tatua.com</a></p>
-                <p>Sales: <a href="mailto:sales@tatua.com">sales@tatua.com</a></p>
-                <p>Support: <a href="mailto:support@tatua.com">support@tatua.com</a></p>
-                <p>Partnerships: <a href="mailto:partners@tatua.com">partners@tatua.com</a></p>
-            </div>
-            <!-- Business hours -->
-            <div class="contact-hours">
-                <h3 class="contact-subheading">Business Hours</h3>
-                <p>Monday - Friday: 8:00 AM - 6:00 PM PST</p>
-                <p>Saturday: 10:00 AM - 2:00 PM PST</p>
-                <p>Sunday: Closed</p>
-            </div>
-            <!-- Emergency support -->
-            <div class="contact-emergency">
-                <h3 class="contact-subheading">Emergency Support</h3>
-                <p>24/7 emergency support available for Enterprise customers</p>
+
+            <!-- Contact Methods Grid -->
+            <div class="contact-methods-grid">
+                <!-- Company Address Card -->
+                <div class="contact-method-card address-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Visit Our Office</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="company-name">Tatua Solutions Inc.</div>
+                        <div class="address-line">123 Innovation Drive, Suite 400</div>
+                        <div class="address-line">San Francisco, CA 94105</div>
+                        <div class="address-note">Open for scheduled meetings</div>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://maps.google.com" class="contact-link" target="_blank">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Phone Numbers Card -->
+                <div class="contact-method-card phone-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Call Us Direct</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">Main Office</span>
+                            </div>
+                            <a href="tel:+15551234567" class="contact-value">+1 (555) 123-4567</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">Sales Team</span>
+                            </div>
+                            <a href="tel:+15551234568" class="contact-value">+1 (555) 123-4568</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">Support</span>
+                            </div>
+                            <a href="tel:+15551234569" class="contact-value">+1 (555) 123-4569</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Addresses Card -->
+                <div class="contact-method-card email-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Send an Email</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">General</span>
+                            </div>
+                            <a href="mailto:hello@tatua.com" class="contact-value">hello@tatua.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">Sales</span>
+                            </div>
+                            <a href="mailto:sales@tatua.com" class="contact-value">sales@tatua.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">Support</span>
+                            </div>
+                            <a href="mailto:support@tatua.com" class="contact-value">support@tatua.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-type">
+                                <span class="type-label">Partners</span>
+                            </div>
+                            <a href="mailto:partners@tatua.com" class="contact-value">partners@tatua.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Hours Card -->
+                <div class="contact-method-card hours-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Business Hours</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="hours-schedule">
+                            <div class="schedule-item">
+                                <div class="day-range">Monday - Friday</div>
+                                <div class="time-range">8:00 AM - 6:00 PM PST</div>
+                                <div class="schedule-status active">Currently Open</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="day-range">Saturday</div>
+                                <div class="time-range">10:00 AM - 2:00 PM PST</div>
+                                <div class="schedule-status limited">Limited Hours</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="day-range">Sunday</div>
+                                <div class="time-range">Closed</div>
+                                <div class="schedule-status closed">Closed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Support Card -->
+                <div class="contact-method-card emergency-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Emergency Support</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="emergency-info">
+                            <div class="emergency-availability">
+                                <span class="availability-text">24/7 Available</span>
+                            </div>
+                            <div class="emergency-description">
+                                Critical system issues and urgent support for Enterprise customers
+                            </div>
+                            <div class="emergency-note">
+                                Average response time: &lt; 15 minutes
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a href="tel:+15551234570" class="contact-link emergency-link">
+                            Emergency Hotline
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Response Time Card -->
+                <div class="contact-method-card response-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Response Times</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="response-times">
+                            <div class="response-item">
+                                <div class="response-method">Email</div>
+                                <div class="response-time">Within 24 hours</div>
+                            </div>
+                            <div class="response-item">
+                                <div class="response-method">Phone</div>
+                                <div class="response-time">Immediate</div>
+                            </div>
+                            <div class="response-item">
+                                <div class="response-method">Live Chat</div>
+                                <div class="response-time">Within 5 minutes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Form section -->
     <section id="contact-form" class="contact-form section-fullheight">
-        <!-- Form element with no action since JavaScript is not allowed -->
-        <form class="form">
-            <!-- Personal Information fieldset -->
-            <fieldset class="form-fieldset">
-                <legend class="form-legend">Contact Information</legend>
-                <div class="form-grid form-grid-2">
-                    <!-- Full Name input -->
-                    <div class="form-group">
-                        <label for="full-name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50"
-                            placeholder="Enter your full name">
-                    </div>
-                    <!-- Email Address input -->
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="you@company.com">
-                    </div>
-                    <!-- Company Name input -->
-                    <div class="form-group">
-                        <label for="company-name">Company Name <span class="required">*</span></label>
-                        <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100"
-                            placeholder="Your company name">
-                    </div>
-                    <!-- Phone Number input -->
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            placeholder="123-456-7890">
-                    </div>
-                </div>
-            </fieldset>
-
-            <!-- Inquiry Details fieldset -->
-            <fieldset class="form-fieldset">
-                <legend class="form-legend">Tell us about your needs</legend>
-                <div class="form-grid form-grid-3">
-                    <!-- Inquiry Type select -->
-                    <div class="form-group">
-                        <label for="inquiry-type">Inquiry Type <span class="required">*</span></label>
-                        <select id="inquiry-type" name="inquiry-type" required>
-                            <option value="">Please select...</option>
-                            <option value="sales">Sales Inquiry</option>
-                            <option value="support">Technical Support</option>
-                            <option value="partnership">Partnership Opportunity</option>
-                            <option value="general">General Question</option>
-                            <option value="demo">Demo Request</option>
-                        </select>
-                    </div>
-                    <!-- Company Size select -->
-                    <div class="form-group">
-                        <label for="company-size">Company Size <span class="required">*</span></label>
-                        <select id="company-size" name="company-size" required>
-                            <option value="">Please select...</option>
-                            <option value="1-10">1-10 employees</option>
-                            <option value="11-50">11-50 employees</option>
-                            <option value="51-200">51-200 employees</option>
-                            <option value="201-1000">201-1000 employees</option>
-                            <option value="1000+">1000+ employees</option>
-                        </select>
-                    </div>
-                    <!-- Current Ticketing System select -->
-                    <div class="form-group">
-                        <label for="ticketing-system">Current Ticketing System</label>
-                        <select id="ticketing-system" name="ticketing-system">
-                            <option value="none">None currently</option>
-                            <option value="zendesk">Zendesk</option>
-                            <option value="servicenow">ServiceNow</option>
-                            <option value="freshdesk">Freshdesk</option>
-                            <option value="jira">Jira Service Management</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <!-- Budget Range select -->
-                    <div class="form-group">
-                        <label for="budget-range">Budget Range</label>
-                        <select id="budget-range" name="budget-range">
-                            <option value="under-1000">Under $1,000/month</option>
-                            <option value="1000-5000">$1,000 - $5,000/month</option>
-                            <option value="5000-15000">$5,000 - $15,000/month</option>
-                            <option value="15000+">$15,000+/month</option>
-                            <option value="enterprise">Enterprise (custom pricing)</option>
-                        </select>
-                    </div>
-                    <!-- Implementation Timeline select -->
-                    <div class="form-group">
-                        <label for="timeline">Implementation Timeline</label>
-                        <select id="timeline" name="timeline">
-                            <option value="immediate">Immediate (within 1 month)</option>
-                            <option value="1-3">1-3 months</option>
-                            <option value="3-6">3-6 months</option>
-                            <option value="6+">6+ months</option>
-                            <option value="exploring">Just exploring options</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Message textarea - Full width -->
-                <div class="form-group form-group-full">
-                    <label for="message">Message <span class="required">*</span></label>
-                    <textarea id="message" name="message" required minlength="10" maxlength="500" rows="5"
-                        placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
-                </div>
-            </fieldset>
-
-            <!-- Preferences fieldset -->
-            <fieldset class="form-fieldset">
-                <legend class="form-legend">Communication Preferences</legend>
-                <div class="form-grid form-grid-2">
-                    <!-- Preferred Contact Method radio -->
-                    <div class="form-group">
-                        <label>Preferred Contact Method <span class="required">*</span></label>
-                        <div class="radio-group">
-                            <input type="radio" id="contact-email" name="contact-method" value="email" required>
-                            <label for="contact-email">Email</label>
-                            <input type="radio" id="contact-phone" name="contact-method" value="phone">
-                            <label for="contact-phone">Phone</label>
-                            <input type="radio" id="contact-video" name="contact-method" value="video">
-                            <label for="contact-video">Video Call</label>
-                        </div>
-                    </div>
-                    <!-- Best Time to Contact radio -->
-                    <div class="form-group">
-                        <label>Best Time to Contact</label>
-                        <div class="radio-group">
-                            <input type="radio" id="time-morning" name="contact-time" value="morning">
-                            <label for="time-morning">Morning (9 AM - 12 PM PST)</label>
-                            <input type="radio" id="time-afternoon" name="contact-time" value="afternoon">
-                            <label for="time-afternoon">Afternoon (12 PM - 5 PM PST)</label>
-                            <input type="radio" id="time-evening" name="contact-time" value="evening">
-                            <label for="time-evening">Evening (5 PM - 8 PM PST)</label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Checkboxes - Full width -->
-                <div class="form-grid form-grid-2">
-                    <!-- Newsletter Subscription checkbox -->
-                    <div class="form-group">
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <label for="newsletter">Yes, I'd like to receive product updates and industry insights</label>
-                    </div>
-                    <!-- Terms Agreement checkbox -->
-                    <div class="form-group">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
-                                Policy</a> <span class="required">*</span></label>
-                    </div>
-                </div>
-            </fieldset>
-
-            <!-- Form actions -->
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Send Message</button>
-                <button type="reset" class="btn btn-secondary">Clear Form</button>
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="form-title">Let's Start a Conversation</h2>
+                <p class="form-subtitle">Tell us about your needs and we'll get back to you within 24 hours</p>
             </div>
-        </form>
+            
+            <!-- Form element with no action since JavaScript is not allowed -->
+            <form class="form">
+                <!-- Personal Information fieldset -->
+                <fieldset class="form-fieldset contact-info-section">
+                    <legend class="form-legend">
+                        Contact Information
+                    </legend>
+                    <div class="form-grid form-grid-2">
+                        <!-- Full Name input -->
+                        <div class="form-group">
+                            <label for="full-name">
+                                Full Name <span class="required">*</span>
+                            </label>
+                            <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50"
+                                placeholder="Enter your full name">
+                            <div class="input-helper">This helps us personalize our response</div>
+                        </div>
+                        <!-- Email Address input -->
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="you@company.com">
+                            <div class="input-helper">We'll use this to send you our response</div>
+                        </div>
+                        <!-- Company Name input -->
+                        <div class="form-group">
+                            <label for="company-name">
+                                Company Name <span class="required">*</span>
+                            </label>
+                            <input type="text" id="company-name" name="company-name" required minlength="2" maxlength="100"
+                                placeholder="Your company name">
+                            <div class="input-helper">Helps us understand your business context</div>
+                        </div>
+                        <!-- Phone Number input -->
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone Number
+                            </label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="123-456-7890">
+                            <div class="input-helper">Optional - for urgent follow-ups</div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Inquiry Details fieldset -->
+                <fieldset class="form-fieldset inquiry-details-section">
+                    <legend class="form-legend">
+                        Tell us about your needs
+                    </legend>
+                    
+                    <!-- Quick Selection Cards -->
+                    <div class="inquiry-type-cards">
+                        <div class="inquiry-card" data-type="sales">
+                            <h4>Sales Inquiry</h4>
+                            <p>Pricing, plans, and purchasing</p>
+                        </div>
+                        <div class="inquiry-card" data-type="demo">
+                            <h4>Demo Request</h4>
+                            <p>See Tatua in action</p>
+                        </div>
+                        <div class="inquiry-card" data-type="support">
+                            <h4>Technical Support</h4>
+                            <p>Get help with implementation</p>
+                        </div>
+                        <div class="inquiry-card" data-type="partnership">
+                            <h4>Partnership</h4>
+                            <p>Explore collaboration opportunities</p>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="inquiry-type" name="inquiry-type" required>
+                    
+                    <div class="form-grid form-grid-3">
+                        <!-- Company Size select -->
+                        <div class="form-group">
+                            <label for="company-size">
+                                Company Size <span class="required">*</span>
+                            </label>
+                            <div class="custom-select">
+                                <select id="company-size" name="company-size" required>
+                                    <option value="">Please select...</option>
+                                    <option value="1-10">1-10 employees (Startup)</option>
+                                    <option value="11-50">11-50 employees (Small Business)</option>
+                                    <option value="51-200">51-200 employees (Mid-size)</option>
+                                    <option value="201-1000">201-1000 employees (Large)</option>
+                                    <option value="1000+">1000+ employees (Enterprise)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Current Ticketing System select -->
+                        <div class="form-group">
+                            <label for="ticketing-system">
+                                Current Ticketing System
+                            </label>
+                            <div class="custom-select">
+                                <select id="ticketing-system" name="ticketing-system">
+                                    <option value="none">None currently</option>
+                                    <option value="zendesk">Zendesk</option>
+                                    <option value="servicenow">ServiceNow</option>
+                                    <option value="freshdesk">Freshdesk</option>
+                                    <option value="jira">Jira Service Management</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Implementation Timeline select -->
+                        <div class="form-group">
+                            <label for="timeline">
+                                Implementation Timeline
+                            </label>
+                            <div class="custom-select">
+                                <select id="timeline" name="timeline">
+                                    <option value="immediate">Immediate (within 1 month)</option>
+                                    <option value="1-3">1-3 months</option>
+                                    <option value="3-6">3-6 months</option>
+                                    <option value="6+">6+ months</option>
+                                    <option value="exploring">Just exploring options</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Budget Range - Special styling -->
+                    <div class="form-group budget-group">
+                        <label for="budget-range">
+                            Budget Range (Optional)
+                        </label>
+                        <div class="budget-slider-container">
+                            <div class="budget-options">
+                                <div class="budget-option" data-value="under-1000">
+                                    <div class="budget-amount">Under $1K</div>
+                                    <div class="budget-desc">per month</div>
+                                </div>
+                                <div class="budget-option" data-value="1000-5000">
+                                    <div class="budget-amount">$1K - $5K</div>
+                                    <div class="budget-desc">per month</div>
+                                </div>
+                                <div class="budget-option" data-value="5000-15000">
+                                    <div class="budget-amount">$5K - $15K</div>
+                                    <div class="budget-desc">per month</div>
+                                </div>
+                                <div class="budget-option" data-value="15000+">
+                                    <div class="budget-amount">$15K+</div>
+                                    <div class="budget-desc">per month</div>
+                                </div>
+                                <div class="budget-option" data-value="enterprise">
+                                    <div class="budget-amount">Enterprise</div>
+                                    <div class="budget-desc">custom pricing</div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="budget-range" name="budget-range">
+                        </div>
+                    </div>
+                    
+                    <!-- Message textarea - Full width -->
+                    <div class="form-group form-group-full message-group">
+                        <label for="message">
+                            Tell us more about your needs <span class="required">*</span>
+                        </label>
+                        <textarea id="message" name="message" required minlength="10" maxlength="500" rows="6"
+                            placeholder="Describe your current challenges, what you're looking for in a ticketing solution, and any specific requirements you have..."></textarea>
+                        <div class="character-count">
+                            <span id="char-count">0</span>/500 characters
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Preferences fieldset -->
+                <fieldset class="form-fieldset preferences-section">
+                    <legend class="form-legend">
+                        Communication Preferences
+                    </legend>
+                    
+                    <div class="form-grid form-grid-2">
+                        <!-- Preferred Contact Method -->
+                        <div class="form-group">
+                            <label class="group-label">
+                                Preferred Contact Method <span class="required">*</span>
+                            </label>
+                            <div class="contact-method-cards">
+                                <div class="method-card">
+                                    <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                                    <label for="contact-email">
+                                        <div class="method-title">Email</div>
+                                        <div class="method-desc">Professional & detailed</div>
+                                    </label>
+                                </div>
+                                <div class="method-card">
+                                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                                    <label for="contact-phone">
+                                        <div class="method-title">Phone</div>
+                                        <div class="method-desc">Quick & direct</div>
+                                    </label>
+                                </div>
+                                <div class="method-card">
+                                    <input type="radio" id="contact-video" name="contact-method" value="video">
+                                    <label for="contact-video">
+                                        <div class="method-title">Video Call</div>
+                                        <div class="method-desc">Face-to-face discussion</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Best Time to Contact -->
+                        <div class="form-group">
+                            <label class="group-label">
+                                Best Time to Contact
+                            </label>
+                            <div class="time-slots">
+                                <div class="time-slot">
+                                    <input type="radio" id="time-morning" name="contact-time" value="morning">
+                                    <label for="time-morning">
+                                        <div class="time-period">Morning</div>
+                                        <div class="time-range">9 AM - 12 PM PST</div>
+                                    </label>
+                                </div>
+                                <div class="time-slot">
+                                    <input type="radio" id="time-afternoon" name="contact-time" value="afternoon">
+                                    <label for="time-afternoon">
+                                        <div class="time-period">Afternoon</div>
+                                        <div class="time-range">12 PM - 5 PM PST</div>
+                                    </label>
+                                </div>
+                                <div class="time-slot">
+                                    <input type="radio" id="time-evening" name="contact-time" value="evening">
+                                    <label for="time-evening">
+                                        <div class="time-period">Evening</div>
+                                        <div class="time-range">5 PM - 8 PM PST</div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Agreement Checkboxes -->
+                    <div class="agreements-section">
+                        <div class="agreement-item">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter" class="checkbox-label">
+                                <div class="checkbox-content">
+                                    <div class="checkbox-title">Stay Updated</div>
+                                    <div class="checkbox-desc">Receive product updates and industry insights (optional)</div>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="agreement-item required-agreement">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms" class="checkbox-label">
+                                <div class="checkbox-content">
+                                    <div class="checkbox-title">Terms & Privacy <span class="required">*</span></div>
+                                    <div class="checkbox-desc">I agree to the <a href="#" class="inline-link">Terms of Service</a> and <a href="#" class="inline-link">Privacy Policy</a></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Form actions -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Send Message
+                        <span class="btn-subtitle">We'll respond within 24 hours</span>
+                    </button>
+                    <button type="reset" class="btn btn-secondary form-reset">
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <!-- Office Locations section -->

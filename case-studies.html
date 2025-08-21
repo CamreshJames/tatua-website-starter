@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Setting character encoding to UTF-8 for universal compatibility -->
     <meta charset="UTF-8">
     <!-- Ensuring responsive design for various devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta description for SEO, as provided -->
-    <meta name="description" content="See how companies like TechFlow and HealthCare Partners transformed their support operations with Tatua's ticketing system.">
+    <meta name="description"
+        content="See how companies like TechFlow and HealthCare Partners transformed their support operations with Tatua's ticketing system.">
     <!-- Page title, as provided -->
     <title>Case Studies - Tatua Success Stories</title>
     <!-- Linking favicon for browser tab icon -->
@@ -16,6 +18,7 @@
     <!-- Linking Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Theme Controls -->
     <div class="theme-controls">
@@ -28,7 +31,8 @@
                     <span class="font-size-small">a</span>
                 </div>
                 <div class="font-size-value" id="font-size-value">16px</div>
-                <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1" title="Font Size">
+                <input type="range" class="font-slider" id="font-slider" min="0.8" max="1.4" step="0.1" value="1"
+                    title="Font Size">
             </div>
         </div>
     </div>
@@ -39,20 +43,22 @@
             <!-- Using img for logo with alt text for accessibility -->
             <img src="assets/tatua-logo.png" alt="Tatua Logo" class="logo">
         </div>
-        
+
         <!-- Hamburger menu button -->
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
-        
+
         <nav class="nav" id="nav">
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="case-studies.html" class="active">Case Studies</a></li>
                 <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="ticketing.html">Tatua Ticketing</a></li>
             </ul>
         </nav>
     </header>
@@ -101,185 +107,347 @@
         <!-- Subheading to reinforce the theme -->
         <h2 class="header-subheading">Real results from real companies</h2>
         <!-- Description to provide context -->
-        <p class="header-description">Discover how businesses across industries have transformed their support operations with Tatua. From startups to enterprise organizations, see the measurable impact of implementing our ticketing system.</p>
+        <p class="header-description">Discover how businesses across industries have transformed their support
+            operations with Tatua. From startups to enterprise organizations, see the measurable impact of implementing
+            our ticketing system.</p>
     </section>
 
     <!-- Case Study 1 section -->
     <section id="case-study-1" class="case-study section-fullheight">
-        <h2 class="case-study-heading">TechFlow Solutions</h2>
-        <!-- Company information -->
-        <div class="case-study-info">
-            <h3 class="case-study-subheading">Company Information</h3>
-            <p><strong>Company:</strong> TechFlow Solutions</p>
-            <p><strong>Industry:</strong> Software Development</p>
-            <p><strong>Size:</strong> 150 employees</p>
-            <p><strong>Location:</strong> Austin, Texas</p>
-        </div>
-        <!-- Challenge -->
-        <div class="case-study-challenge">
-            <h3 class="case-study-subheading">Challenge</h3>
-            <p>TechFlow was drowning in support requests with over 400 daily tickets and an 8-hour average response time. Their homegrown system couldn't handle the volume, causing customer frustration and agent burnout.</p>
-        </div>
-        <!-- Solution -->
-        <div class="case-study-solution">
-            <h3 class="case-study-subheading">Solution</h3>
-            <p>Implemented Tatua with automated ticket routing, priority escalation, and integration with their existing development tools.</p>
-        </div>
-        <!-- Results -->
-        <div class="case-study-results">
-            <h3 class="case-study-subheading">Results</h3>
-            <ul>
-                <li><strong>Response Time:</strong> Reduced from 8 hours to 2 hours (75% improvement)</li>
-                <li><strong>Customer Satisfaction:</strong> Increased from 2.1/5 to 4.5/5 stars</li>
-                <li><strong>Agent Productivity:</strong> 40% increase in tickets resolved per day</li>
-                <li><strong>Customer Retention:</strong> 25% improvement in renewal rates</li>
-            </ul>
-        </div>
-        <!-- Quote -->
-        <div class="case-study-quote">
-            <blockquote>"Tatua transformed our support operations overnight. Our customers are happier, our agents are less stressed, and our metrics have never looked better." - Jamie Martinez, Head of Customer Success</blockquote>
+        <div class="case-study-container">
+            <div class="case-study-header">
+                <div class="company-logo-placeholder">
+                    <span class="company-initial">T</span>
+                </div>
+                <div class="company-title-section">
+                    <h2 class="case-study-heading">TechFlow Solutions</h2>
+                    <div class="company-meta">
+                        <span class="industry-tag">Software Development</span>
+                        <span class="size-tag">150 employees</span>
+                        <span class="location-tag">📍 Austin, Texas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-grid">
+                <!-- Challenge Card -->
+                <div class="case-study-card challenge-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3 class="card-title">The Challenge</h3>
+                    <p class="card-content">TechFlow was drowning in support requests with over <strong>400 daily
+                            tickets</strong> and an <strong>8-hour average response time</strong>. Their homegrown
+                        system couldn't handle the volume, causing customer frustration and agent burnout.</p>
+                    <div class="challenge-metrics">
+                        <div class="metric-item negative">
+                            <span class="metric-number">400</span>
+                            <span class="metric-label">Daily Tickets</span>
+                        </div>
+                        <div class="metric-item negative">
+                            <span class="metric-number">8hrs</span>
+                            <span class="metric-label">Response Time</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution Card -->
+                <div class="case-study-card solution-card">
+                    <div class="card-icon">💡</div>
+                    <h3 class="card-title">The Solution</h3>
+                    <p class="card-content">Implemented Tatua with automated ticket routing, priority escalation, and
+                        integration with their existing development tools.</p>
+                    <div class="solution-features">
+                        <div class="feature-item">🔄 Automated Routing</div>
+                        <div class="feature-item">⚡ Priority Escalation</div>
+                        <div class="feature-item">🔗 Dev Tool Integration</div>
+                    </div>
+                </div>
+
+                <!-- Results Card -->
+                <div class="case-study-card results-card">
+                    <div class="card-icon">📈</div>
+                    <h3 class="card-title">The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-metric">
+                            <div class="metric-value">75%</div>
+                            <div class="metric-desc">Faster Response<br><small>8hrs → 2hrs</small></div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">4.5★</div>
+                            <div class="metric-desc">Satisfaction<br><small>from 2.1★</small></div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">+40%</div>
+                            <div class="metric-desc">Agent<br>Productivity</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">+25%</div>
+                            <div class="metric-desc">Customer<br>Retention</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="case-study-testimonial">
+                <div class="quote-icon">"</div>
+                <blockquote class="testimonial-quote">Tatua transformed our support operations overnight. Our customers
+                    are happier, our agents are less stressed, and our metrics have never looked better.</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JM</div>
+                    <div class="author-info">
+                        <div class="author-name">Jamie Martinez</div>
+                        <div class="author-title">Head of Customer Success</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Case Study 2 section -->
-    <section id="case-study-2" class="case-study section-fullheight">
-        <h2 class="case-study-heading">HealthCare Partners</h2>
-        <!-- Company information -->
-        <div class="case-study-info">
-            <h3 class="case-study-subheading">Company Information</h3>
-            <p><strong>Company:</strong> HealthCare Partners</p>
-            <p><strong>Industry:</strong> Healthcare Technology</p>
-            <p><strong>Size:</strong> 500 employees</p>
-            <p><strong>Location:</strong> Boston, Massachusetts</p>
-        </div>
-        <!-- Challenge -->
-        <div class="case-study-challenge">
-            <h3 class="case-study-subheading">Challenge</h3>
-            <p>As a healthcare technology company, HealthCare Partners needed HIPAA-compliant ticket management while maintaining fast response times for critical system issues affecting patient care.</p>
-        </div>
-        <!-- Solution -->
-        <div class="case-study-solution">
-            <h3 class="case-study-subheading">Solution</h3>
-            <p>Deployed Tatua's enterprise security features with encrypted data storage, audit trails, and role-based access controls specifically designed for healthcare compliance.</p>
-        </div>
-        <!-- Results -->
-        <div class="case-study-results">
-            <h3 class="case-study-subheading">Results</h3>
-            <ul>
-                <li><strong>Compliance:</strong> Maintained 100% HIPAA compliance during audits</li>
-                <li><strong>Resolution Time:</strong> 50% faster resolution for critical issues</li>
-                <li><strong>Security Incidents:</strong> Zero data breaches since implementation</li>
-                <li><strong>Audit Score:</strong> Perfect compliance score for 18 consecutive months</li>
-            </ul>
-        </div>
-        <!-- Quote -->
-        <div class="case-study-quote">
-            <blockquote>"Security and speed don't have to be mutually exclusive. Tatua proved that we can have both." - Dr. Patricia Chen, Chief Technology Officer</blockquote>
+    <section id="case-study-2" class="case-study section-fullheight healthcare-theme">
+        <div class="case-study-container">
+            <div class="case-study-header">
+                <div class="company-logo-placeholder healthcare">
+                    <span class="company-initial">H</span>
+                </div>
+                <div class="company-title-section">
+                    <h2 class="case-study-heading">HealthCare Partners</h2>
+                    <div class="company-meta">
+                        <span class="industry-tag healthcare">Healthcare Technology</span>
+                        <span class="size-tag">500 employees</span>
+                        <span class="location-tag">📍 Boston, Massachusetts</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-grid">
+                <!-- Challenge Card -->
+                <div class="case-study-card challenge-card healthcare">
+                    <div class="card-icon">🏥</div>
+                    <h3 class="card-title">The Challenge</h3>
+                    <p class="card-content">As a healthcare technology company, HealthCare Partners needed
+                        <strong>HIPAA-compliant</strong> ticket management while maintaining fast response times for
+                        critical system issues affecting patient care.
+                    </p>
+                    <div class="challenge-highlights">
+                        <div class="highlight-item">🔒 HIPAA Compliance Required</div>
+                        <div class="highlight-item">⚡ Critical System Issues</div>
+                        <div class="highlight-item">👥 Patient Care Impact</div>
+                    </div>
+                </div>
+
+                <!-- Solution Card -->
+                <div class="case-study-card solution-card healthcare">
+                    <div class="card-icon">🛡️</div>
+                    <h3 class="card-title">The Solution</h3>
+                    <p class="card-content">Deployed Tatua's enterprise security features with encrypted data storage,
+                        audit trails, and role-based access controls specifically designed for healthcare compliance.
+                    </p>
+                    <div class="solution-features">
+                        <div class="feature-item">🔐 Encrypted Storage</div>
+                        <div class="feature-item">📋 Audit Trails</div>
+                        <div class="feature-item">👤 Role-Based Access</div>
+                    </div>
+                </div>
+
+                <!-- Results Card -->
+                <div class="case-study-card results-card healthcare">
+                    <div class="card-icon">✅</div>
+                    <h3 class="card-title">The Results</h3>
+                    <div class="results-grid healthcare">
+                        <div class="result-metric">
+                            <div class="metric-value">100%</div>
+                            <div class="metric-desc">HIPAA<br>Compliance</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">50%</div>
+                            <div class="metric-desc">Faster Critical<br>Resolution</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">0</div>
+                            <div class="metric-desc">Security<br>Incidents</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">18mo</div>
+                            <div class="metric-desc">Perfect Audit<br>Score</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="case-study-testimonial healthcare">
+                <div class="quote-icon">"</div>
+                <blockquote class="testimonial-quote">Security and speed don't have to be mutually exclusive. Tatua
+                    proved that we can have both.</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar healthcare">PC</div>
+                    <div class="author-info">
+                        <div class="author-name">Dr. Patricia Chen</div>
+                        <div class="author-title">Chief Technology Officer</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Case Study 3 section -->
-    <section id="case-study-3" class="case-study section-fullheight">
-        <h2 class="case-study-heading">RetailMax Corporation</h2>
-        <!-- Company information -->
-        <div class="case-study-info">
-            <h3 class="case-study-subheading">Company Information</h3>
-            <p><strong>Company:</strong> RetailMax Corporation</p>
-            <p><strong>Industry:</strong> E-commerce</p>
-            <p><strong>Size:</strong> 1,200 employees</p>
-            <p><strong>Location:</strong> Seattle, Washington</p>
+    <section id="case-study-3" class="case-study section-fullheight retail-theme">
+        <div class="case-study-container">
+            <div class="case-study-header">
+                <div class="company-logo-placeholder retail">
+                    <span class="company-initial">R</span>
+                </div>
+                <div class="company-title-section">
+                    <h2 class="case-study-heading">RetailMax Corporation</h2>
+                    <div class="company-meta">
+                        <span class="industry-tag retail">E-commerce</span>
+                        <span class="size-tag">1,200 employees</span>
+                        <span class="location-tag">📍 Seattle, Washington</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study-grid">
+                <!-- Challenge Card -->
+                <div class="case-study-card challenge-card retail">
+                    <div class="card-icon">🛒</div>
+                    <h3 class="card-title">The Challenge</h3>
+                    <p class="card-content">RetailMax's customer service team was overwhelmed during peak shopping
+                        seasons, with ticket volumes spiking <strong>300%</strong> during holidays and response times
+                        becoming unacceptable.</p>
+                    <div class="seasonal-chart">
+                        <div class="chart-bar">
+                            <div class="bar normal" style="height: 30%"></div>
+                            <span class="bar-label">Normal</span>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar peak" style="height: 90%"></div>
+                            <span class="bar-label">Holiday Peak</span>
+                        </div>
+                        <div class="spike-indicator">+300%</div>
+                    </div>
+                </div>
+
+                <!-- Solution Card -->
+                <div class="case-study-card solution-card retail">
+                    <div class="card-icon">⚙️</div>
+                    <h3 class="card-title">The Solution</h3>
+                    <p class="card-content">Implemented Tatua's scalable infrastructure with seasonal auto-scaling,
+                        intelligent routing based on customer value, and integration with their CRM system.</p>
+                    <div class="solution-features">
+                        <div class="feature-item">📈 Auto-Scaling</div>
+                        <div class="feature-item">🎯 Smart Routing</div>
+                        <div class="feature-item">🔗 CRM Integration</div>
+                    </div>
+                </div>
+
+                <!-- Results Card -->
+                <div class="case-study-card results-card retail">
+                    <div class="card-icon">💰</div>
+                    <h3 class="card-title">The Results</h3>
+                    <div class="results-grid retail">
+                        <div class="result-metric">
+                            <div class="metric-value">300%</div>
+                            <div class="metric-desc">Volume Handled<br><small>No degradation</small></div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">&lt;1hr</div>
+                            <div class="metric-desc">Black Friday<br>Response</div>
+                        </div>
+                        <div class="result-metric">
+                            <div class="metric-value">-35%</div>
+                            <div class="metric-desc">Staffing<br>Costs</div>
+                        </div>
+                        <div class="result-metric revenue-highlight">
+                            <div class="metric-value">$2.3M</div>
+                            <div class="metric-desc">Recovered<br>Sales</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="case-study-testimonial retail">
+                <div class="quote-icon">"</div>
+                <blockquote class="testimonial-quote">Last Black Friday was our smoothest ever, despite record traffic.
+                    Tatua's scaling capabilities are phenomenal.</blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar retail">MT</div>
+                    <div class="author-info">
+                        <div class="author-name">Michael Torres</div>
+                        <div class="author-title">VP of Customer Experience</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Challenge -->
-        <div class="case-study-challenge">
-            <h3 class="case-study-subheading">Challenge</h3>
-            <p>RetailMax's customer service team was overwhelmed during peak shopping seasons, with ticket volumes spiking 300% during holidays and response times becoming unacceptable.</p>
-        </div>
-        <!-- Solution -->
-        <div class="case-study-solution">
-            <h3 class="case-study-subheading">Solution</h3>
-            <p>Implemented Tatua's scalable infrastructure with seasonal auto-scaling, intelligent routing based on customer value, and integration with their CRM system.</p>
-        </div>
-        <!-- Results -->
-        <div class="case-study-results">
-            <h3 class="case-study-subheading">Results</h3>
-            <ul>
-                <li><strong>Peak Performance:</strong> Handled 300% volume increase without degradation</li>
-                <li><strong>Response Time:</strong> Maintained under 1-hour response even during Black Friday</li>
-                <li><strong>Cost Efficiency:</strong> 35% reduction in seasonal staffing needs</li>
-                <li><strong>Revenue Impact:</strong> $2.3M in recovered sales from faster issue resolution</li>
-            </ul>
-        </div>
-        <!-- Quote -->
-        <div class="case-study-quote">
-            <blockquote>"Last Black Friday was our smoothest ever, despite record traffic. Tatua's scaling capabilities are phenomenal." - Michael Torres, VP of Customer Experience</blockquote>
-        </div>
-    </section>
+    </section>""
 
     <!-- Performance Metrics Table section -->
     <section id="metrics" class="metrics-table section-fullheight">
         <h2 class="table-heading">Tatua Implementation Results</h2>
         <div class="table-container">
             <table class="data-table">
-            <caption>Tatua Implementation Results - Before vs After Comparison</caption>
-            <thead>
-                <tr>
-                    <th>Metric</th>
-                    <th>Before Tatua</th>
-                    <th>After Tatua</th>
-                    <th>Improvement</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Average Response Time</td>
-                    <td>6.5 hours</td>
-                    <td>1.8 hours</td>
-                    <td>72% faster</td>
-                </tr>
-                <tr>
-                    <td>Customer Satisfaction</td>
-                    <td>3.2/5 stars</td>
-                    <td>4.8/5 stars</td>
-                    <td>50% increase</td>
-                </tr>
-                <tr>
-                    <td>First Contact Resolution</td>
-                    <td>45%</td>
-                    <td>78%</td>
-                    <td>73% improvement</td>
-                </tr>
-                <tr>
-                    <td>Ticket Resolution Time</td>
-                    <td>24 hours</td>
-                    <td>8 hours</td>
-                    <td>67% faster</td>
-                </tr>
-                <tr>
-                    <td>Agent Productivity</td>
-                    <td>15 tickets/day</td>
-                    <td>28 tickets/day</td>
-                    <td>87% increase</td>
-                </tr>
-                <tr>
-                    <td>Customer Retention</td>
-                    <td>82%</td>
-                    <td>94%</td>
-                    <td>15% improvement</td>
-                </tr>
-                <tr>
-                    <td>Support Cost per Ticket</td>
-                    <td>$12.50</td>
-                    <td>$7.80</td>
-                    <td>38% reduction</td>
-                </tr>
-                <tr>
-                    <td>Escalation Rate</td>
-                    <td>18%</td>
-                    <td>6%</td>
-                    <td>67% reduction</td>
-                </tr>
-            </tbody>
-        </table>
+                <caption>Tatua Implementation Results - Before vs After Comparison</caption>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Before Tatua</th>
+                        <th>After Tatua</th>
+                        <th>Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Average Response Time</td>
+                        <td>6.5 hours</td>
+                        <td>1.8 hours</td>
+                        <td>72% faster</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Satisfaction</td>
+                        <td>3.2/5 stars</td>
+                        <td>4.8/5 stars</td>
+                        <td>50% increase</td>
+                    </tr>
+                    <tr>
+                        <td>First Contact Resolution</td>
+                        <td>45%</td>
+                        <td>78%</td>
+                        <td>73% improvement</td>
+                    </tr>
+                    <tr>
+                        <td>Ticket Resolution Time</td>
+                        <td>24 hours</td>
+                        <td>8 hours</td>
+                        <td>67% faster</td>
+                    </tr>
+                    <tr>
+                        <td>Agent Productivity</td>
+                        <td>15 tickets/day</td>
+                        <td>28 tickets/day</td>
+                        <td>87% increase</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Retention</td>
+                        <td>82%</td>
+                        <td>94%</td>
+                        <td>15% improvement</td>
+                    </tr>
+                    <tr>
+                        <td>Support Cost per Ticket</td>
+                        <td>$12.50</td>
+                        <td>$7.80</td>
+                        <td>38% reduction</td>
+                    </tr>
+                    <tr>
+                        <td>Escalation Rate</td>
+                        <td>18%</td>
+                        <td>6%</td>
+                        <td>67% reduction</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -288,15 +456,18 @@
         <h2 class="testimonials-heading">What Our Customers Say</h2>
         <div class="testimonials-container">
             <div class="testimonial-item">
-                <blockquote>"The implementation was seamless, and the results were immediate. Our response times improved by 70% in the first month."</blockquote>
+                <blockquote>"The implementation was seamless, and the results were immediate. Our response times
+                    improved by 70% in the first month."</blockquote>
                 <p class="testimonial-author">- Sarah Williams, Director of Support, CloudTech</p>
             </div>
             <div class="testimonial-item">
-                <blockquote>"Tatua's automation features saved us from hiring 3 additional support agents during our busiest quarter."</blockquote>
+                <blockquote>"Tatua's automation features saved us from hiring 3 additional support agents during our
+                    busiest quarter."</blockquote>
                 <p class="testimonial-author">- Robert Chen, Operations Manager, DataFlow Inc.</p>
             </div>
             <div class="testimonial-item">
-                <blockquote>"The best investment we've made in customer experience. Our satisfaction scores have never been higher."</blockquote>
+                <blockquote>"The best investment we've made in customer experience. Our satisfaction scores have never
+                    been higher."</blockquote>
                 <p class="testimonial-author">- Lisa Rodriguez, Customer Success Lead, InnovateTech</p>
             </div>
         </div>
@@ -319,4 +490,5 @@
 
     <script src="assets/script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatua - Ticketing System</title>
+    <link rel="stylesheet" href="assets/ticketing/style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-container">
+        <form id="loginForm" class="login-form">
+            <h2>Tatua Login</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" class="hidden">
+        <!-- Header -->
+        <header class="header">
+            <h1>📃 Tatua <button class="nav-tab active" onclick="TabModule.switchTab('raiseTicket')">Raise Ticket</button>
+                <button class="nav-tab" onclick="TabModule.switchTab('ticketsList')">Tickets List</button></h1>
+                
+
+            <div class="user-info">
+                <span id="userGreeting">Welcome, User</span>
+                <button class="logout-btn" onclick="AuthModule.logout()">Logout</button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Raise Ticket Tab -->
+            <div id="raiseTicket" class="tab-content active">
+                <div class="form-container">
+                    <h2>Raise a Ticket</h2>
+                    <p>Have you encountered? Fill the form and we will  get back to you as soon as possible</p>
+                    
+                    <form id="ticketForm" class="form-grid">
+                        <div id="successMessage" class="success-message hidden"></div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                                <div class="error-message" id="fullNameError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailAddress">Email Address</label>
+                                <input type="email" id="emailAddress" name="emailAddress" required>
+                                <div class="error-message" id="emailAddressError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                                <div class="error-message" id="phoneNumberError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Issue Category</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Mobile App is slow">Mobile App is slow</option>
+                                    <option value="Website Issues">Website Issues</option>
+                                    <option value="Payment Problems">Payment Problems</option>
+                                    <option value="Account Access">Account Access</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="error-message" id="categoryError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required 
+                                placeholder="Describe your issue in detail..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Contact</label>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                                    <input type="radio" name="preferredContact" value="Email" required>
+                                    Email
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                                    <input type="radio" name="preferredContact" value="Phone" required>
+                                    Phone
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                                    <input type="radio" name="preferredContact" value="Other" required>
+                                    Other
+                                </label>
+                            </div>
+                            <div class="error-message" id="preferredContactError"></div>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                            <label for="termsAccepted">I agree to the Terms and Conditions</label>
+                            <div class="error-message" id="termsAcceptedError"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Ticket</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tickets List Tab -->
+            <div id="ticketsList" class="tab-content">
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Tickets List</h3>
+                        <button class="refresh-btn" onclick="TicketModule.refreshTickets()">Refresh</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ticket ID</th>
+                                    <th>Requester</th>
+                                    <th>Issue Category</th>
+                                    <th>Subject</th>
+                                    <th>Date Created</th>
+                                    <th>Status</th>
+                                    <th>Priority</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ticketsTableBody">
+                                <!-- Tickets will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/ticketing/script.js"></script>
+</body>
+</html>

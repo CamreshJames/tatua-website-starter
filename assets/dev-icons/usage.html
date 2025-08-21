@@ -1,0 +1,310 @@
+<DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Dev Icons - Usage Guide</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <style> 
+        :root { 
+            --primary: #667eea; 
+            --secondary: #764ba2; 
+            --success: #27ae60; 
+            --text: #2c3e50; 
+            --text-light: #7f8c8d; 
+            --bg: #ffffff; 
+            --bg-light: #f8f9fa; 
+            --border: #e0e6ed; 
+        } 
+        * { margin: 0; padding: 0; box-sizing: border-box; } 
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); min-height: 100vh; } 
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; } 
+        .card { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-radius: 20px; padding: 40px; margin-bottom: 30px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); border: 1px solid rgba(255, 255, 255, 0.2); } 
+        .header { text-align: center; margin-bottom: 40px; } 
+        .header h1 { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; } 
+        .header p { font-size: 1.2rem; color: var(--text-light); } 
+        .nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; } 
+        .nav-btn { padding: 12px 24px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); } 
+        .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); } 
+        .section { margin-bottom: 40px; } 
+        .section h2 { font-size: 2rem; margin-bottom: 20px; color: var(--text); } 
+        .section h3 { font-size: 1.5rem; margin: 30px 0 15px; color: var(--text); } 
+        .section p { margin-bottom: 15px; color: var(--text-light); font-size: 1.1rem; } 
+        .code-block { background: #2d3748; color: #e2e8f0; padding: 20px; border-radius: 12px; margin: 20px 0; font-family: 'SF Mono', monospace; font-size: 0.9rem; overflow-x: auto; position: relative; } 
+        .code-block::before { content: attr(data-lang); position: absolute; top: 10px; right: 15px; background: rgba(255, 255, 255, 0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; color: #a0aec0; } 
+        .example { background: var(--bg-light); padding: 25px; border-radius: 12px; margin: 20px 0; border-left: 4px solid var(--primary); } 
+        .example h4 { margin-bottom: 15px; color: var(--text); } 
+        .icon-demo { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: white; border-radius: 8px; margin: 5px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); } 
+        .icon-demo svg { width: 20px; height: 20px; color: var(--primary); } 
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; } 
+        .feature { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); } 
+        .feature h4 { color: var(--primary); margin-bottom: 10px; } 
+        .copy-btn { background: var(--success); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; margin-left: 10px; transition: all 0.3s ease; } 
+        .copy-btn:hover { background: #219a52; transform: translateY(-1px); } 
+        @media (max-width: 768px) { .container { padding: 10px; } .card { padding: 20px; } .header h1 { font-size: 2rem; } .nav { flex-direction: column; align-items: center; } } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <div class="card"> 
+            <div class="header"> 
+                <h1>Dev Icons Usage Guide</h1> 
+                <p>Complete guide to using your professional icon library</p> 
+            </div> 
+ 
+            <div class="nav"> 
+                <a href="icon-viewer.html" class="nav-btn">Browse Icons</a> 
+                <a href="#html" class="nav-btn">HTML Usage</a> 
+                <a href="#css" class="nav-btn">CSS Styling</a> 
+                <a href="#frameworks" class="nav-btn">Frameworks</a> 
+            </div> 
+ 
+            <div class="section"> 
+                <h2>Quick Start</h2> 
+                <p>Your dev-icons collection includes 280+ professional SVG icons ready for use in any project. Here's how to get started:</p> 
+ 
+                <div class="grid"> 
+                    <div class="feature"> 
+                        <h4>1. Browse Icons</h4> 
+                        <p>Open icon-viewer.html to explore all available icons with search and filtering.</p> 
+                    </div> 
+                    <div class="feature"> 
+                        <h4>2. Copy Icon Names</h4> 
+                        <p>Click any icon in the viewer to copy its name to your clipboard.</p> 
+                    </div> 
+                    <div class="feature"> 
+                        <h4>3. Use in Projects</h4> 
+                        <p>Reference SVG files directly or embed inline in your HTML/CSS.</p> 
+                    </div> 
+                </div> 
+            </div> 
+ 
+            <div class="section" id="html"> 
+                <h2>HTML Usage</h2> 
+ 
+                <h3>Method 1: Direct SVG Reference</h3> 
+                <p>Reference SVG files directly using img tags or object elements:</p> 
+ 
+                <div class="code-block" data-lang="HTML"> 
+<-- Using img tag --> 
+<img src="dev-icons/home.svg" alt="Home" width="24" height="24"> 
+ 
+<-- Using object tag (better for styling) --> 
+<object data="dev-icons/settings.svg" type="image/svg+xml" width="24" height="24"></object> 
+                </div> 
+ 
+                <h3>Method 2: Inline SVG</h3> 
+                <p>Copy SVG content directly into your HTML for maximum control:</p> 
+ 
+                <div class="code-block" data-lang="HTML"> 
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/> 
+    <polyline points="9,22 9,12 15,12 15,22"/> 
+</svg> 
+                </div> 
+ 
+                <div class="example"> 
+                    <h4>Live Examples:</h4> 
+                    <div class="icon-demo"> 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg> 
+                        Home 
+                    </div> 
+                    <div class="icon-demo"> 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/></svg> 
+                        Settings 
+                    </div> 
+                    <div class="icon-demo"> 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 
+                        User 
+                    </div> 
+                </div> 
+            </div> 
+ 
+            <div class="section" id="css"> 
+                <h2>CSS Styling</h2> 
+ 
+                <h3>Basic Styling</h3> 
+                <p>Style your icons with CSS for consistent appearance:</p> 
+ 
+                <div class="code-block" data-lang="CSS"> 
+.icon { 
+    width: 24px; 
+    height: 24px; 
+    color: #667eea; 
+    transition: all 0.3s ease; 
+} 
+ 
+.icon:hover { 
+    color: #764ba2; 
+    transform: scale(1.1); 
+} 
+ 
+/* Size variants */ 
+.icon-sm { width: 16px; height: 16px; } 
+.icon-md { width: 24px; height: 24px; } 
+.icon-lg { width: 32px; height: 32px; } 
+.icon-xl { width: 48px; height: 48px; } 
+                </div> 
+ 
+                <h3>Advanced Effects</h3> 
+                <div class="code-block" data-lang="CSS"> 
+/* Gradient fill */ 
+.icon-gradient { 
+    background: linear-gradient(135deg, #667eea, #764ba2); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+} 
+ 
+/* Glow effect */ 
+.icon-glow { 
+    filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.5)); 
+} 
+ 
+/* Rotation animation */ 
+.icon-spin { 
+    animation: spin 2s linear infinite; 
+} 
+ 
+@keyframes spin { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+} 
+                </div> 
+            </div> 
+ 
+            <div class="section" id="frameworks"> 
+                <h2>Framework Integration</h2> 
+ 
+                <h3>React</h3> 
+                <div class="code-block" data-lang="JSX"> 
+import React from 'react'; 
+ 
+const HomeIcon = () => ( 
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"> 
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/> 
+        <polyline points="9,22 9,12 15,12 15,22"/> 
+    </svg> 
+); 
+ 
+export default HomeIcon; 
+                </div> 
+ 
+                <h3>Vue.js</h3> 
+                <div class="code-block" data-lang="Vue"> 
+<template> 
+    <svg :width="size" :height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/> 
+        <polyline points="9,22 9,12 15,12 15,22"/> 
+    </svg> 
+</template> 
+ 
+<script> 
+export default { 
+    props: { 
+        size: { type: Number, default: 24 } 
+    } 
+} 
+</script> 
+                </div> 
+ 
+                <h3>Angular</h3> 
+                <div class="code-block" data-lang="TypeScript"> 
+import { Component, Input } from '@angular/core'; 
+ 
+@Component({ 
+    selector: 'app-icon', 
+    template: ` 
+        <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+            <ng-content></ng-content> 
+        </svg> 
+    ` 
+}) 
+export class IconComponent { 
+    @Input() size: number = 24; 
+} 
+                </div> 
+            </div> 
+ 
+            <div class="section"> 
+                <h2>Best Practices</h2> 
+ 
+                <div class="grid"> 
+                    <div class="feature"> 
+                        <h4>Accessibility</h4> 
+                        <p>Always include alt text or aria-labels for screen readers.</p> 
+                    </div> 
+                    <div class="feature"> 
+                        <h4>Performance</h4> 
+                        <p>Use inline SVG for icons that need styling, external files for static icons.</p> 
+                    </div> 
+                    <div class="feature"> 
+                        <h4>Consistency</h4> 
+                        <p>Maintain consistent sizing and styling across your application.</p> 
+                    </div> 
+                    <div class="feature"> 
+                        <h4>Optimization</h4> 
+                        <p>Icons are already optimized, but consider sprite sheets for large sets.</p> 
+                    </div> 
+                </div> 
+            </div> 
+ 
+            <div class="section"> 
+                <h2>Icon Categories</h2> 
+                <p>Your collection includes icons organized in these categories:</p> 
+ 
+                <div class="grid"> 
+                    <div class="feature"><h4>Arrows (28)</h4><p>Directional and navigation arrows</p></div> 
+                    <div class="feature"><h4>UI Elements (30)</h4><p>Interface controls and buttons</p></div> 
+                    <div class="feature"><h4>Social (16)</h4><p>Social media and platform icons</p></div> 
+                    <div class="feature"><h4>Files (15)</h4><p>Document and folder icons</p></div> 
+                    <div class="feature"><h4>Devices (30)</h4><p>Technology and hardware icons</p></div> 
+                    <div class="feature"><h4>Communication (13)</h4><p>Messaging and contact icons</p></div> 
+                    <div class="feature"><h4>Media (15)</h4><p>Audio, video, and playback controls</p></div> 
+                    <div class="feature"><h4>Business (20)</h4><p>Commerce and analytics icons</p></div> 
+                </div> 
+            </div> 
+ 
+            <div class="section"> 
+                <h2>Support</h2> 
+                <p>Need help? Here are some resources:</p> 
+                <ul style="margin-left: 20px; color: var(--text-light);"> 
+                    <li>Use the icon viewer to browse and search all available icons</li> 
+                    <li>All icons are SVG format for perfect scalability</li> 
+                    <li>Icons use 24x24 viewBox with 2px stroke width by default</li> 
+                    <li>Compatible with all modern browsers and frameworks</li> 
+                </ul> 
+            </div> 
+        </div> 
+    </div> 
+ 
+    <script> 
+        // Smooth scrolling for navigation links 
+        document.querySelectorAll('a[href="#"]').forEach(anchor => { 
+            anchor.addEventListener('click', function (e) { 
+                e.preventDefault(); 
+                const target = document.querySelector(this.getAttribute('href')); 
+                if (target) { 
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+                } 
+            }); 
+        }); 
+ 
+        // Copy code functionality 
+        document.querySelectorAll('.code-block').forEach(block => { 
+            const button = document.createElement('button'); 
+            button.className = 'copy-btn'; 
+            button.textContent = 'Copy'; 
+            button.style.position = 'absolute'; 
+            button.style.top = '10px'; 
+            button.style.right = '60px'; 
+            button.onclick = () => { 
+                navigator.clipboard.writeText(block.textContent.trim()); 
+                button.textContent = 'Copied'; 
+                setTimeout(() => button.textContent = 'Copy', 2000); 
+            }; 
+            block.style.position = 'relative'; 
+            block.appendChild(button); 
+        }); 
+    </script> 
+</body> 
+</html> 
