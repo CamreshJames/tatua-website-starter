@@ -1,7 +1,7 @@
-        // Storage Module
+// Storage Module
         const StorageModule = {
             // Current storage type: memory, session, or local
-            currentType: 'local',
+            currentType: 'memory',
             
             setItem: function(key, value) {
                 const serializedValue = JSON.stringify(value);
@@ -11,15 +11,14 @@
                         if (!window.memoryStorage) window.memoryStorage = {};
                         window.memoryStorage[key] = serializedValue;
                         break;
+
                     case 'session':
-                        // Note: sessionStorage not available in Claude artifacts
-                        if (!window.memoryStorage) window.memoryStorage = {};
-                        window.memoryStorage[key] = serializedValue;
+                        if (!window.sessionStorage) window.sessionStorage = {};
+                        window.sessionStorage.setItem(key, serializedValue);
                         break;
                     case 'local':
-                        // Note: localStorage not available in Claude artifacts
-                        if (!window.memoryStorage) window.memoryStorage = {};
-                        window.memoryStorage[key] = serializedValue;
+                        if (!window.localStorage) window.localStorage = {};
+                        window.localStorage.setItem(key, serializedValue);
                         break;
                 }
             },
@@ -34,13 +33,13 @@
                         }
                         break;
                     case 'session':
-                        if (window.memoryStorage && window.memoryStorage[key]) {
-                            value = window.memoryStorage[key];
+                        if (window.sessionStorage && window.sessionStorage.getItem) {
+                            value = window.sessionStorage.getItem(key);
                         }
                         break;
                     case 'local':
-                        if (window.memoryStorage && window.memoryStorage[key]) {
-                            value = window.memoryStorage[key];
+                        if (window.localStorage && window.localStorage.getItem) {
+                            value = window.localStorage.getItem(key);
                         }
                         break;
                 }
@@ -56,13 +55,13 @@
                         }
                         break;
                     case 'session':
-                        if (window.memoryStorage) {
-                            delete window.memoryStorage[key];
+                        if (window.sessionStorage && window.sessionStorage.removeItem) {
+                            window.sessionStorage.removeItem(key);
                         }
                         break;
                     case 'local':
-                        if (window.memoryStorage) {
-                            delete window.memoryStorage[key];
+                        if (window.localStorage && window.localStorage.removeItem) {
+                            window.localStorage.removeItem(key);
                         }
                         break;
                 }
@@ -436,10 +435,22 @@
                         <td><span class="status-badge status-${ticket.status.toLowerCase()}">${ticket.status}</span></td>
                         <td><span class="priority-${ticket.priority.toLowerCase()}">${ticket.priority}</span></td>
                         <td>
-                            <button class="btn btn-danger" onclick="TicketModule.deleteTicket(${ticket.id})" 
-                                    title="Delete Ticket">
-                                Delete
-                            </button>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <button class="btn btn-danger" onclick="TicketModule.deleteTicket(${ticket.id})" 
+                                        title="Delete Ticket">
+                                    Delete
+                                </button>
+                                ${isAdmin ? `
+                                    <button class="btn btn-secondary" onclick="printTickets()" 
+                                            title="Print Report" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        📄 Print
+                                    </button>
+                                    <button class="btn btn-secondary" onclick="exportTicketsCSV()" 
+                                            title="Export CSV" style="padding: 0.25rem 0.5rem; font-size: 0.8rem;">
+                                        📥 CSV
+                                    </button>
+                                ` : ''}
+                            </div>
                         </td>
                     </tr>
                 `).join('');
